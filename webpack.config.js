@@ -27,7 +27,11 @@ module.exports = {
     filename: '[name].js',
     chunkFilename: '[id].[chunkhash].js',
   },
-  devServer: {},
+  devServer: {
+	  publicPath: '/',
+	  contentBase: "./",
+	  hot: true
+  },
   mode: 'production',
   module: {
     rules: [

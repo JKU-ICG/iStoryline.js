@@ -26,7 +26,7 @@
   },
   "scripts": {
     "build": "babel src -d build",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --host 0.0.0.0 --public storyline.games.cg.jku.at",
     "test": "mocha -r esm --recursive",
     "preinstall": "npx npm-force-resolutions"
   },

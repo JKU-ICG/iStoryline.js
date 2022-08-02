@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  story:
+    build:
+      context: .
+      dockerfile: Dockerfile
+        #volumes:
+        #- .:/src
+    image: story
+    container_name: story
+      #command: npm run start
+    ports:
+      - "8087:8080"
+    environment:
+      - LETSENCRYPT_HOST=storyline.games.cg.jku.at
+      - VIRTUAL_HOST=storyline.games.cg.jku.at
+      - VIRTUAL_PORT=8080
+      #NODE_ENV: development
+      #DEBUG: nodejs-docker-express:*
+    networks:
+      - nginxproxy
+      - default
+networks:
+  nginxproxy:
+    external: true
