@@ -46,10 +46,11 @@ module.exports = {
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },
+  stats: { children: false },
   plugins: [
     HtmlWebpackPluginConfig,
     new HtmlWebpackPlugin({
-      template: './app/static/simple11.html',
+      template: './app/static/complex11.html',
       filename: 'complex11.html',
       inject: 'body',
       chunks: ['complex11'],

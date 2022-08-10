@@ -519,7 +519,10 @@ function timeReturn(perTimestamp) {
   return [perMin, perSec]
 }
 
+// need to change the order of reading the pictures if reversing the location labels
 function locationBox(locationSet, useMode) {
+  console.log(locationSet)
+
   let lineHeight = height / locationSet.length
 
   let stripe = svg.image('../../src/image/stripe.svg', 0, 0, 5920, lineHeight)
@@ -643,8 +646,12 @@ function locationBox(locationSet, useMode) {
             let tipX = pt.x
             let tipY = pt.y
 
-            tipX -= 100
-            tipY -= 100
+            tipX -= 200
+
+            if (i > 4) {
+              // tipX -= 100
+              tipY -= 100
+            }
 
             mask = svg
               .rect(tipX, tipY, maskSize, maskSize, 10, 10)
@@ -779,8 +786,12 @@ function locationBox(locationSet, useMode) {
             let tipX = pt.x
             let tipY = pt.y
 
-            tipX -= 100
-            tipY -= 100
+            tipX -= 200
+
+            if (i > 4) {
+              // tipX -= 100
+              tipY -= 100
+            }
 
             mask = svg
               .rect(tipX, tipY, maskSize, maskSize, 10, 10)
@@ -830,6 +841,7 @@ function locationBox(locationSet, useMode) {
   for (let i = 0; i < length; i++) {
     rect[i].mousedown(() => {
       // console.log(rect[i])
+
       pt.x = event.clientX
       pt.y = event.clientY
       pt = pt.matrixTransform(mySvg.getScreenCTM().inverse())
@@ -853,6 +865,7 @@ function locationBox(locationSet, useMode) {
         .rect(tipX + 25, tipY + 50, mapSize, mapSize, 10, 10)
         .attr({ fill: 'rgba(225, 225, 0)' })
       if (useMode === 0) {
+        ;[]
         img = svg.image(
           `../../src/image/sessionImgsSimple/${i + 1}.png`,
           tipX + 25,
@@ -870,7 +883,7 @@ function locationBox(locationSet, useMode) {
         )
       } else {
         img = svg.image(
-          `../../src/image/Minimaps/${i + 1}.png`,
+          `../../src/image/MiniMaps/${i + 1}.png`,
           tipX + 25,
           tipY + 50,
           mapSize,
@@ -886,15 +899,22 @@ function locationBox(locationSet, useMode) {
         .text(tipX + 28, tipY + 35, locationSet[i])
         .attr('pointer-events', 'none')
         .attr({ 'font-size': 20 })
-
-      rect[i].mouseup(() => {
-        console.log('REMOVE')
-        border.remove()
-        img.remove()
-        mask.remove()
-        text.remove()
-        event.preventDefault()
-      })
+    })
+    rect[i].drag(() => {
+      console.log('REMOVE')
+      border.remove()
+      img.remove()
+      mask.remove()
+      text.remove()
+      event.preventDefault()
+    })
+    rect[i].mouseup(() => {
+      console.log('REMOVE')
+      border.remove()
+      img.remove()
+      mask.remove()
+      text.remove()
+      event.preventDefault()
     })
   }
 }
@@ -1077,8 +1097,8 @@ async function drawEvents(graph, participantsInfo) {
               let tipY = pt.y
 
               if (pt.y >= 995) {
-                // tipX -= 100
-                tipY -= 400
+                tipX -= 50
+                tipY -= 250
               }
 
               if (pt.x >= 5700) {

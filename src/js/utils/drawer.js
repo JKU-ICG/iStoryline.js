@@ -266,7 +266,7 @@ export function drawStoryline(
         pt.x = event.clientX
         pt.y = event.clientY
 
-        // console.log(event.clientX, event.clientY)
+        console.log(event.clientX, event.clientY)
 
         pt = pt.matrixTransform(mySvg.getScreenCTM().inverse())
 
