@@ -25,15 +25,19 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
     </style>
-    <script>
-      alert(
-        'For best experience, please use the fullscreen mode. Please also be patient while we are loading the page.'
-      )
-    </script>
   </head>
 
   <body>
     <div id="container">
+      <div id="tip" style="padding-top: 20%">
+        <img
+          src="src/image/Spinner.gif"
+          style="display: block; margin-left: auto; margin-right: auto"
+        />
+        <h2 style="text-align: center;">
+          The visualization takes a while to load. Please be patient!
+        </h2>
+      </div>
       <svg id="mySvg" class="mySvg" height="100vh"></svg>
     </div>
     <script>

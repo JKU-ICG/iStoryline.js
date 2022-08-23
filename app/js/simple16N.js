@@ -6,7 +6,7 @@ import * as d3Fetch from 'd3-fetch'
 import Snap from 'snapsvg'
 import $ from 'jquery'
 
-main('Match16/Complex.json')
+main('Match16/test.json')
 
 // Initialise json files
 const jsonRead = d3Fetch.json('../../data/json/Match16/MatchInfo.json') // Info of match
@@ -28,7 +28,7 @@ let xOrigin = 350,
 
 // We have to hard-code this part as we manually define colours
 // Saving this for decorating circles
-let playerColour = {
+/*let playerColour = {
   Player1: '#5B7DB1',
   Player2: '#00B8D1',
   Player3: '#00B827',
@@ -38,6 +38,32 @@ let playerColour = {
   Player7: '#ba000d',
   Player8: '#ff94c2',
   Player9: '#ffa000',
+  Player10: '#ffd149',
+}*/
+
+/*let playerColour = {
+  Player1: '#5B7DB1',
+  Player2: '#00B8D1',
+  Player3: '#00B827',
+  Player4: '#5BB58A',
+  Player5: '#9B8BD6',
+  Player6: '#ff0000',
+  Player7: '#ba000d',
+  Player8: '#ff94c2',
+  Player9: '#FF7F00',
+  Player10: '#ffd149',
+}*/
+
+let playerColour = {
+  Player1: '#6A3D9A',
+  Player2: '#00B8D1',
+  Player3: '#00B827',
+  Player4: '#5BB58A',
+  Player5: '#9B8BD6',
+  Player6: '#ff0000',
+  Player7: '#ba000d',
+  Player8: '#ff94c2',
+  Player9: '#FF7F00',
   Player10: '#ffd149',
 }
 

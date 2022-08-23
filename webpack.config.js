@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const WebpackBar = require('webpackbar')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './app/static/simple11.html',
   filename: 'simple11.html',
@@ -17,6 +18,7 @@ module.exports = {
     simple11: ['./app/js/simple11.js'],
     complex11: ['./app/js/complex11.js'],
     complex5: ['./app/js/complex5.js'],
+    demo: ['./app/js/demo.js'],
     simple5: ['./app/js/simple5.js'],
     complex16: ['./app/js/complex16.js'],
     simple16: ['./app/js/simple16.js'],
@@ -60,6 +62,12 @@ module.exports = {
       filename: 'simple5.html',
       inject: 'body',
       chunks: ['simple5'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './app/static/demo.html',
+      filename: 'demo.html',
+      inject: 'body',
+      chunks: ['demo'],
     }),
     new HtmlWebpackPlugin({
       template: './app/static/complex5.html',
