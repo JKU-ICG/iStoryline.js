@@ -1,4 +1,4 @@
-import { drawStoryline } from '../../src/js/utils/drawer'
+import { drawStoryline } from '../../src/js/utils/drawerB'
 import { shapeCovering } from '../../src/js/shapeCovering'
 import { none } from 'html-webpack-plugin/lib/chunksorter'
 import iStoryline from '../../src/js'
@@ -6,7 +6,7 @@ import * as d3Fetch from 'd3-fetch'
 import Snap from 'snapsvg'
 import $ from 'jquery'
 
-main('Match16/Complex.json')
+main('Match16/test1C.json')
 
 // Initialise json files
 const jsonRead = d3Fetch.json('../../data/json/Match16/MatchInfo.json') // Info of match
@@ -20,7 +20,9 @@ const height = 1080
 // We need to set the total timestamp first
 // Sections decide how the interval of timeline display
 let totalTimestamp
+let lastTimestamp = null
 let sections
+let sectionsForText
 
 // Canvas Origin
 let xOrigin = 350,
@@ -28,7 +30,7 @@ let xOrigin = 350,
 
 // We have to hard-code this part as we manually define colours
 // Saving this for decorating circles
-let playerColour = {
+/*let playerColour = {
   Player1: '#5B7DB1',
   Player2: '#00B8D1',
   Player3: '#00B827',
@@ -39,6 +41,47 @@ let playerColour = {
   Player8: '#ff94c2',
   Player9: '#ffa000',
   Player10: '#ffd149',
+}*/
+
+/*
+let playerColour = {
+  Player1: '#6A3D9A', // changed
+  Player2: '#00B8D1',
+  Player3: '#00B827',
+  Player4: '#5BB58A',
+  Player5: '#9B8BD6',
+  Player6: '#ff0000',
+  Player7: '#ba000d',
+  Player8: '#ff94c2',
+  Player9: '#FF7F00', // changed
+  Player10: '#ffd149',
+}
+*/
+
+/*let playerColour = {
+  Player1: '#ff0000',
+  Player2: '#ba000d',
+  Player3: '#ff94c2',
+  Player4: '#FF7F00', // changed
+  Player5: '#ffd149',
+  Player6: '#6A3D9A', // changed
+  Player7: '#00B8D1',
+  Player8: '#00B827',
+  Player9: '#5BB58A',
+  Player10: '#9B8BD6'
+}*/
+
+let playerColour = {
+  Player1: '#ff0000',
+  Player2: '#ba000d',
+  Player3: '#ff94c2',
+  Player4: '#FF7F00', // changed
+  Player5: '#ffd149',
+  Player6: '#000080', // changed
+  Player7: '#00B8D1',
+  Player8: '#006400', // changed
+  Player9: '#5BB58A',
+  Player10: '#9B8BD6',
 }
 
 // Save location info for later use
@@ -51,6 +94,8 @@ let pt = mySvg.createSVGPoint()
 const svg = Snap('#mySvg')
 svg.attr({ viewBox: '0 0 6500 1200' })
 
+let heroArray = []
+
 async function main(fileName) {
   const iStorylineInstance = new iStoryline()
   const fileUrl = `../../data/${fileName.split('.')[1]}/${fileName}`
@@ -59,16 +104,27 @@ async function main(fileName) {
 
   // Read Json through the Promise and save participants data
 
-  let participantsInfo = await jsonRead.then(function(result) {
-    let data = result['info']['participants']
-    let participantList = []
-
-    for (const element of data) {
-      participantList.push(element['participantId'], element['championName'])
-    }
-
-    return participantList
+  let participantsInfoData = await jsonRead.then(function(result) {
+    return result['info']['participants']
   })
+
+  let participantsInfo = []
+
+  for (const element of participantsInfoData) {
+    participantsInfo.push(element['participantId'], element['championName'])
+  }
+
+  let nexusKiller = null
+  let nexusKillerId = null
+
+  for (const element of participantsInfoData) {
+    if (element['nexusKills'] == 1) {
+      nexusKillerId = element['participantId']
+      nexusKiller = 'Player' + nexusKillerId
+    }
+  }
+
+  console.log(nexusKiller)
 
   let dbscan = await jsonDBSCAN.then(function(result) {
     dbSCANData = result
@@ -142,7 +198,9 @@ async function main(fileName) {
     )
   })
 
-  await drawEvents(graph, participantsInfo)
+  await drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId)
+
+  await timelineX(graph)
 
   $('#tip').remove()
 
@@ -151,11 +209,22 @@ async function main(fileName) {
 
 // Draw hero info
 function heroInfo(character, participantsInfo, useMode) {
+  for (let i = 1; i < participantsInfo.length + 1; i++) {
+    console.log(participantsInfo[i - 1])
+    if (i % 2 == 0) {
+      heroArray.push(participantsInfo[i - 1])
+    }
+  }
+
+  for (let i = 0; i < 5; i++) {
+    heroArray.push(heroArray.shift())
+  }
+
+  console.log(heroArray)
+
   let playerImg = []
   for (let i = 0; i < character.length; i++) {
-    playerImg[i] = `../../src/image/Champions/${
-      participantsInfo[i * 2 + 1]
-    }Square.png`
+    playerImg[i] = `../../src/image/Champions/${heroArray[i]}Square.png`
   }
 
   const teamOneX = 30
@@ -171,7 +240,7 @@ function heroInfo(character, participantsInfo, useMode) {
   const yOffset = 70
 
   let icon = svg.image(playerImg[0], teamOneX, teamOneY, iconSize, iconSize)
-  svg.text(teamOneX - 10, teamOneY + yOffset, participantsInfo[1]).attr({
+  svg.text(teamOneX - 10, teamOneY + yOffset, heroArray[0]).attr({
     fill: playerColour['Player1'],
   })
 
@@ -198,11 +267,9 @@ function heroInfo(character, participantsInfo, useMode) {
     iconSize
   )
 
-  svg
-    .text(teamOneX + horizontalAdj, teamOneY + yOffset, participantsInfo[3])
-    .attr({
-      fill: playerColour['Player2'],
-    })
+  svg.text(teamOneX + horizontalAdj, teamOneY + yOffset, heroArray[1]).attr({
+    fill: playerColour['Player2'],
+  })
 
   svg
     .rect(
@@ -226,11 +293,9 @@ function heroInfo(character, participantsInfo, useMode) {
     iconSize
   )
 
-  svg
-    .text(teamOneX - 10, teamOneY + verticalAdj + yOffset, participantsInfo[5])
-    .attr({
-      fill: playerColour['Player3'],
-    })
+  svg.text(teamOneX - 10, teamOneY + verticalAdj + yOffset, heroArray[2]).attr({
+    fill: playerColour['Player3'],
+  })
 
   svg
     .rect(
@@ -258,7 +323,7 @@ function heroInfo(character, participantsInfo, useMode) {
     .text(
       teamOneX + horizontalAdj,
       teamOneY + verticalAdj + yOffset,
-      participantsInfo[7]
+      heroArray[3]
     )
     .attr({
       fill: playerColour['Player4'],
@@ -287,11 +352,7 @@ function heroInfo(character, participantsInfo, useMode) {
   )
 
   svg
-    .text(
-      teamOneX - 10,
-      teamOneY + verticalAdj * 2 + yOffset,
-      participantsInfo[9]
-    )
+    .text(teamOneX - 10, teamOneY + verticalAdj * 2 + yOffset, heroArray[4])
     .attr({
       fill: playerColour['Player5'],
     })
@@ -314,7 +375,7 @@ function heroInfo(character, participantsInfo, useMode) {
   const teamTwoY = 850
 
   let iconSix = svg.image(playerImg[5], teamTwoX, teamTwoY, iconSize, iconSize)
-  svg.text(teamTwoX - 10, teamTwoY + yOffset, participantsInfo[11]).attr({
+  svg.text(teamTwoX - 10, teamTwoY + yOffset, heroArray[5]).attr({
     fill: playerColour['Player6'],
   })
 
@@ -340,11 +401,9 @@ function heroInfo(character, participantsInfo, useMode) {
     iconSize
   )
 
-  svg
-    .text(teamTwoX + horizontalAdj, teamTwoY + yOffset, participantsInfo[13])
-    .attr({
-      fill: playerColour['Player7'],
-    })
+  svg.text(teamTwoX + horizontalAdj, teamTwoY + yOffset, heroArray[6]).attr({
+    fill: playerColour['Player7'],
+  })
 
   svg
     .rect(
@@ -368,11 +427,9 @@ function heroInfo(character, participantsInfo, useMode) {
     iconSize
   )
 
-  svg
-    .text(teamTwoX - 10, teamTwoY + verticalAdj + yOffset, participantsInfo[15])
-    .attr({
-      fill: playerColour['Player8'],
-    })
+  svg.text(teamTwoX - 10, teamTwoY + verticalAdj + yOffset, heroArray[7]).attr({
+    fill: playerColour['Player8'],
+  })
 
   svg
     .rect(
@@ -400,7 +457,7 @@ function heroInfo(character, participantsInfo, useMode) {
     .text(
       teamTwoX + horizontalAdj,
       teamTwoY + verticalAdj + yOffset,
-      participantsInfo[17]
+      heroArray[8]
     )
     .attr({
       fill: playerColour['Player9'],
@@ -429,11 +486,7 @@ function heroInfo(character, participantsInfo, useMode) {
   )
 
   svg
-    .text(
-      teamTwoX - 10,
-      teamTwoY + verticalAdj * 2 + yOffset,
-      participantsInfo[19]
-    )
+    .text(teamTwoX - 10, teamTwoY + verticalAdj * 2 + yOffset, heroArray[9])
     .attr({
       fill: playerColour['Player10'],
     })
@@ -471,20 +524,46 @@ function heroInfo(character, participantsInfo, useMode) {
   }
 }
 
-// Draw timeline
+// Draw timeline basis
 function timeline() {
   sections = totalTimestamp / 180000 // 3 mins interval
+  sectionsForText = totalTimestamp / 60000
   console.log(sections)
   let accumTimestamp = totalTimestamp / sections
+  // let accumTimestampForText = totalTimestamp / sectionsForText
   let timeAidedLine
+  let markInBetween
   const distance =
     (width /
       (timeReturn(totalTimestamp)[0] * 60 + timeReturn(totalTimestamp)[1])) *
     180
+  const distanceForText =
+    (width /
+      (timeReturn(totalTimestamp)[0] * 60 + timeReturn(totalTimestamp)[1])) *
+    60
   console.log(distance)
+
   let posX
 
-  for (let segments = 0; segments < sections; segments++) {
+  for (let segments = 0; segments < sectionsForText; segments++) {
+    // draw vertical lines
+    posX = xOrigin + distanceForText * segments
+    console.log(posX)
+    markInBetween = svg.line(posX, 1145, posX, 1160)
+    markInBetween.attr({
+      fill: 'none',
+      stroke: 'black',
+      'stroke-dasharray': '4',
+    })
+  }
+  for (let segments = 0; segments < sectionsForText; segments++) {
+    // write labels
+    let txt = svg.text(
+      70 + distance * segments + 95 + 70 + 100,
+      1120 + 20 + 60,
+      timeStamp(accumTimestamp * segments)
+    )
+
     // draw vertical lines
     posX = xOrigin + distance * segments
     console.log(posX)
@@ -495,21 +574,27 @@ function timeline() {
       'stroke-dasharray': '4',
     })
 
-    // write labels
-    let txt = svg.text(
-      70 + distance * segments + 95 + 70 + 100,
-      1120 + 20 + 60,
-      timeStamp(accumTimestamp * segments)
-    ) // we need a loop to draw all lines#
     txt.attr({
       'font-size': 30,
     })
   }
 }
 
+// Draw X axis of the timeline
+async function timelineX(graph) {
+  let endPointX = graph.getCharacterX('Player1', lastTimestamp) + 30
+
+  // draw the horizontal line
+  const xAxis = svg.line(xOrigin, 1150, endPointX, 1150).attr({
+    fill: 'none',
+    stroke: 'black',
+    'stroke-dasharray': '4',
+  })
+}
+
 function timeStamp(perTimestamp) {
   let perMin = Math.floor((perTimestamp / 1000 / 60) << 0)
-  return perMin + 'Min'
+  return perMin + ' Min'
 }
 
 function timeReturn(perTimestamp) {
@@ -604,7 +689,7 @@ function locationBox(locationSet, useMode) {
               // console.log(`../../src/image/sessionImgsSimple/${i + 1}.png`)
             } else if (useMode === 1) {
               img = svg.image(
-                `../../src/image/sessionImgsSimpleSpecial/${i + 1}.png`,
+                `../../src/image/sessionImgsSimpleSpecialR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -612,7 +697,7 @@ function locationBox(locationSet, useMode) {
               )
             } else {
               img = svg.image(
-                `../../src/image/MiniMaps/${i + 1}.png`,
+                `../../src/image/MiniMapsR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -670,7 +755,7 @@ function locationBox(locationSet, useMode) {
               // console.log(`../../src/image/sessionImgsSimple/${i + 1}.png`)
             } else if (useMode === 1) {
               img = svg.image(
-                `../../src/image/sessionImgsSimpleSpecial/${i + 1}.png`,
+                `../../src/image/sessionImgsSimpleSpecialR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -678,7 +763,7 @@ function locationBox(locationSet, useMode) {
               )
             } else {
               img = svg.image(
-                `../../src/image/MiniMaps/${i + 1}.png`,
+                `../../src/image/MiniMapsR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -743,7 +828,7 @@ function locationBox(locationSet, useMode) {
               )
             } else if (useMode === 1) {
               img = svg.image(
-                `../../src/image/sessionImgsSimpleSpecial/${i + 1}.png`,
+                `../../src/image/sessionImgsSimpleSpecialR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -751,7 +836,7 @@ function locationBox(locationSet, useMode) {
               )
             } else {
               img = svg.image(
-                `../../src/image/MiniMaps/${i + 1}.png`,
+                `../../src/image/MiniMapsR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -809,7 +894,7 @@ function locationBox(locationSet, useMode) {
               )
             } else if (useMode === 1) {
               img = svg.image(
-                `../../src/image/sessionImgsSimpleSpecial/${i + 1}.png`,
+                `../../src/image/sessionImgsSimpleSpecialR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -817,7 +902,7 @@ function locationBox(locationSet, useMode) {
               )
             } else {
               img = svg.image(
-                `../../src/image/MiniMaps/${i + 1}.png`,
+                `../../src/image/MiniMapsR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -867,7 +952,6 @@ function locationBox(locationSet, useMode) {
         .rect(tipX + 25, tipY + 50, mapSize, mapSize, 10, 10)
         .attr({ fill: 'rgba(225, 225, 0)' })
       if (useMode === 0) {
-        ;[]
         img = svg.image(
           `../../src/image/sessionImgsSimple/${i + 1}.png`,
           tipX + 25,
@@ -877,7 +961,7 @@ function locationBox(locationSet, useMode) {
         )
       } else if (useMode === 1) {
         img = svg.image(
-          `../../src/image/sessionImgsSimpleSpecial/${i + 1}.png`,
+          `../../src/image/sessionImgsSimpleSpecialR/${i + 1}.png`,
           tipX + 25,
           tipY + 50,
           mapSize,
@@ -885,7 +969,7 @@ function locationBox(locationSet, useMode) {
         )
       } else {
         img = svg.image(
-          `../../src/image/MiniMaps/${i + 1}.png`,
+          `../../src/image/MiniMapsR/${i + 1}.png`,
           tipX + 25,
           tipY + 50,
           mapSize,
@@ -921,7 +1005,7 @@ function locationBox(locationSet, useMode) {
   }
 }
 
-async function drawEvents(graph, participantsInfo) {
+async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
   await jsonReadTwo.then(function(result) {
     const data = result
     for (let i in data) {
@@ -930,11 +1014,19 @@ async function drawEvents(graph, participantsInfo) {
       let killerName = data[i]['killerName']
       let victimName = data[i]['victimName']
 
+      let killerId = heroArray.indexOf(killerName) + 1 // +1 for real position
+
       let border, mask, img
 
       let killer, victim
 
       let killerIcon, victimIcon
+
+      let killerBorder, victimBorder
+
+      let innerCircle
+
+      let killerNameElement, victimNameElement
 
       let killing
 
@@ -953,6 +1045,8 @@ async function drawEvents(graph, participantsInfo) {
         let indexHolder = currentPlayer.match(/\d/g)
         indexHolder = indexHolder.join('')
         // console.log('CP: ' + (parseInt(indexHolder) - 1))
+
+        playerIndex = reverseId(playerIndex)
 
         svg
           .image(
@@ -996,8 +1090,10 @@ async function drawEvents(graph, participantsInfo) {
               let xOffset = (posX / 15000) * 200
               let yOffset = 200 - (posY / 15000) * 200
 
-              border = svg.rect(tipX, tipY, 250, 300, 10, 10).attr({
-                stroke: playerColour[currentPlayer],
+              currentPlayer = 'Player' + String(playerIndex)
+
+              border = svg.rect(tipX, tipY, 250, 325, 10, 10).attr({
+                stroke: 'black',
                 fill: 'rgba(255,255,255, 0.9)',
                 strokeWidth: '3px',
               })
@@ -1007,35 +1103,69 @@ async function drawEvents(graph, participantsInfo) {
 
               killerIcon = svg.image(
                 `../../src/image/Champions/${killerName}Square.png`,
-                35 + tipX,
-                35 + tipY,
-                40,
-                40
-              )
-              victimIcon = svg.image(
-                `../../src/image/Champions/${victimName}Square.png`,
-                130 + tipX,
-                35 + tipY,
+                38 + tipX,
+                40 + tipY,
                 40,
                 40
               )
 
+              killerBorder = svg.rect(35 + tipX, 37 + tipY, 46, 46).attr({
+                fill: 'none',
+                stroke: `${playerColour['Player' + killerId]}`,
+                'stroke-width': '3',
+                opacity: 0.7,
+              })
+
+              killerNameElement = svg.text(
+                35 + tipX,
+                35 + 50 + 20 + tipY,
+                killerName
+              )
+
+              victimIcon = svg.image(
+                `../../src/image/Champions/${victimName}Square.png`,
+                133 + tipX,
+                41 + tipY,
+                40,
+                40
+              )
+
+              victimBorder = svg.rect(130 + tipX, 37 + tipY, 46, 46).attr({
+                fill: 'none',
+                stroke: `${playerColour[currentPlayer]}`,
+                'stroke-width': '3',
+                opacity: 0.7,
+              })
+
+              victimNameElement = svg.text(
+                130 + tipX,
+                35 + 50 + 20 + tipY,
+                victimName
+              )
+
               mask = svg
-                .rect(tipX + 25, tipY + 90, mapSize, mapSize, 10, 10)
+                .rect(tipX + 25, tipY + 115, mapSize, mapSize, 10, 10)
                 .attr({ fill: 'rgba(225, 225, 0)' })
               img = svg.image(
                 `../../src/image/MiniMap.png`,
                 tipX + 25,
-                tipY + 90,
+                tipY + 115,
                 mapSize,
                 mapSize
               )
               img.attr({
                 mask: mask,
               })
+              innerCircle = svg
+                .circle(tipX + 25 + xOffset, tipY + 115 + yOffset, 4)
+                .attr({ fill: 'none', stroke: `white`, strokeWidth: '3px' })
               killing = svg
-                .circle(tipX + 25 + xOffset, tipY + 90 + yOffset, 5)
-                .attr({ fill: 'none', stroke: 'white', strokeWidth: '3px' })
+                .circle(tipX + 25 + xOffset, tipY + 115 + yOffset, 5)
+                .attr({
+                  fill: 'none',
+                  stroke: `${playerColour[currentPlayer]}`,
+                  strokeWidth: '2px',
+                })
               // console.log(currentTimestamp, currentPlayer)
             },
             () => {
@@ -1047,6 +1177,11 @@ async function drawEvents(graph, participantsInfo) {
               mask.remove()
               img.remove()
               killing.remove()
+              innerCircle.remove()
+              victimBorder.remove()
+              killerBorder.remove()
+              killerNameElement.remove()
+              victimNameElement.remove()
             }
           )
       }
@@ -1062,7 +1197,19 @@ async function drawEvents(graph, participantsInfo) {
           buildingType = data[i]['buildingType']
         }
 
-        let resultType = buildingType.replace('_', ' ')
+        // let resultType = buildingType.replace('_', ' ')
+
+        let index = buildingType.indexOf('_')
+
+        console.log(0, index)
+        console.log(buildingType.slice(0, index))
+        let resultType = []
+        resultType.push(buildingType.slice(0, index))
+        console.log(index + 1, buildingType.length)
+        console.log(buildingType.slice(index + 1))
+        resultType.push(buildingType.slice(index + 1))
+
+        console.log(resultType)
 
         let currentPlayer = 'Player' + String(playerIndex)
 
@@ -1075,6 +1222,14 @@ async function drawEvents(graph, participantsInfo) {
         let iconPosX = graph.getCharacterX(currentPlayer, currentTimestamp)
         let iconPosY = graph.getCharacterY(currentPlayer, currentTimestamp)
         // console.log(currentPlayer, posX, posY)
+
+        playerIndex = reverseId(playerIndex)
+        currentPlayer = 'Player' + String(playerIndex)
+
+        let borderColour = playerColour[currentPlayer]
+
+        playerIndex = reverseId(playerIndex)
+        currentPlayer = 'Player' + String(playerIndex)
 
         let mask, img
 
@@ -1098,9 +1253,14 @@ async function drawEvents(graph, participantsInfo) {
               let tipX = pt.x
               let tipY = pt.y
 
-              if (pt.y >= 995) {
-                tipX -= 50
-                tipY -= 250
+              if (pt.y >= 850) {
+                // tipX -= 100
+                tipY -= 100
+              }
+
+              if (pt.y >= 950) {
+                // tipX -= 100
+                tipY -= 200
               }
 
               if (pt.x >= 5700) {
@@ -1110,28 +1270,50 @@ async function drawEvents(graph, participantsInfo) {
               let xOffset = (posX / 15000) * 200
               let yOffset = 200 - (posY / 15000) * 200
 
-              border = svg.rect(tipX, tipY, 250, 300, 10, 10).attr({
-                stroke: 'black',
+              border = svg.rect(tipX, tipY, 250, 310, 10, 10).attr({
+                stroke: `Black`,
                 fill: 'rgba(255,255,255, 0.9)',
                 strokeWidth: '3px',
               })
 
-              killer = svg.text(35 + tipX, 25 + tipY, 'KILLER: ')
-              victim = svg.text(80 + tipX, 62 + tipY, resultType)
-
               killerName =
                 participantsInfo[participantsInfo.indexOf(playerIndex) + 1]
 
+              console.log(killerName)
+
               killerIcon = svg.image(
                 `../../src/image/Champions/${killerName}Square.png`,
-                35 + tipX,
-                35 + tipY,
+                38 + tipX,
+                40 + tipY - 3,
                 40,
                 40
               )
 
+              killerBorder = svg.rect(35 + tipX, 37 + tipY - 3, 46, 46).attr({
+                fill: 'none',
+                stroke: `${borderColour}`,
+                'stroke-width': '3',
+                opacity: 0.7,
+              })
+
+              killer = svg.text(35 + tipX, 25 + tipY, 'KILLER: ')
+              // victim = svg.text(85 + tipX, 62 + tipY, resultType)
+
+              victim = svg
+                .text({ text: [resultType[0], resultType[1]] })
+                .selectAll('tspan')
+                .forEach(function(tspan, i) {
+                  tspan.attr({ x: 120 + tipX, y: 52 + tipY + 25 * i })
+                })
+
+              killerNameElement = svg.text(
+                35 + tipX,
+                35 + 50 + 15 + tipY - 3,
+                killerName
+              )
+
               mask = svg
-                .rect(tipX + 25, tipY + 90, mapSize, mapSize, 10, 10)
+                .rect(tipX + 25, tipY + 100, mapSize, mapSize, 10, 10)
                 .attr({ fill: 'rgba(225, 225, 0)' })
               img = svg.image(
                 `../../src/image/MiniMap.png`,
@@ -1143,9 +1325,16 @@ async function drawEvents(graph, participantsInfo) {
               img.attr({
                 mask: mask,
               })
+              innerCircle = svg
+                .circle(tipX + 25 + xOffset, tipY + 100 + yOffset, 4)
+                .attr({ fill: 'none', stroke: `white`, strokeWidth: '3px' })
               killing = svg
-                .circle(tipX + 25 + xOffset, tipY + 90 + yOffset, 5)
-                .attr({ fill: 'none', stroke: 'white', strokeWidth: '3px' })
+                .circle(tipX + 25 + xOffset, tipY + 100 + yOffset, 5)
+                .attr({
+                  fill: 'none',
+                  stroke: `${borderColour}`,
+                  strokeWidth: '2px',
+                })
             },
             () => {
               border.remove()
@@ -1154,11 +1343,103 @@ async function drawEvents(graph, participantsInfo) {
               victim.remove()
               mask.remove()
               img.remove()
+              innerCircle.remove()
               killing.remove()
+              killerBorder.remove()
+              killerNameElement.remove()
             }
           )
       }
+
+      lastTimestamp = data[i]['timestamp']
     }
+
+    // draw the final nexus kill
+
+    let border
+
+    let killer, victim
+
+    let killerIcon, killerBorder, killerNameElement
+
+    const iconSize = 35
+    const offset = iconSize / 2
+
+    let nexusKillPosX = graph.getCharacterX(nexusKiller, lastTimestamp)
+    let nexusKillPosY = graph.getCharacterY(nexusKiller, lastTimestamp)
+
+    let reversedKillerId = reverseId(nexusKillerId)
+
+    svg
+      .image(
+        `../../src/image/Turrets/${nexusKiller}.png`,
+        nexusKillPosX - offset,
+        nexusKillPosY - offset,
+        iconSize,
+        iconSize
+      )
+      .hover(
+        event => {
+          pt.x = event.clientX
+          pt.y = event.clientY
+
+          pt = pt.matrixTransform(mySvg.getScreenCTM().inverse())
+
+          let tipX = pt.x
+          let tipY = pt.y
+
+          if (pt.y >= 850) {
+            // tipX -= 100
+            tipY -= 100
+          }
+
+          if (pt.y >= 950) {
+            // tipX -= 100
+            tipY -= 200
+          }
+
+          border = svg.rect(tipX, tipY, 125, 130, 10, 10).attr({
+            stroke: `black`,
+            fill: 'rgba(255,255,255, 0.9)',
+            strokeWidth: '3px',
+          })
+
+          killer = svg.text(35 + tipX, 25 + tipY + 2, 'KILLER: ')
+          victim = svg.text(35 + tipX, 62 + tipY + 45 + 13, 'Nexus Kill')
+
+          let killerName =
+            participantsInfo[participantsInfo.indexOf(nexusKillerId) + 1]
+
+          killerIcon = svg.image(
+            `../../src/image/Champions/${killerName}Square.png`,
+            38 + tipX,
+            40 + tipY - 3,
+            40,
+            40
+          )
+
+          killerBorder = svg.rect(35 + tipX, 37 + tipY - 3, 46, 46).attr({
+            fill: 'none',
+            stroke: `${playerColour['Player' + reversedKillerId]}`,
+            'stroke-width': '3',
+            opacity: 0.7,
+          })
+
+          killerNameElement = svg.text(
+            35 + tipX,
+            35 + 50 + 15 + tipY - 3,
+            killerName
+          )
+        },
+        () => {
+          border.remove()
+          killer.remove()
+          killerIcon.remove()
+          victim.remove()
+          killerBorder.remove()
+          killerNameElement.remove()
+        }
+      )
   })
 }
 
@@ -1197,6 +1478,15 @@ function drawDBSCAN(dbSCANData, graph) {
     }
 
     shapeCovering(points)
+  }
+}
+
+// function for reversing ID of team members for reversed layout
+function reverseId(IdNumber) {
+  if (IdNumber > 5) {
+    return (IdNumber -= 5)
+  } else {
+    return (IdNumber += 5)
   }
 }
 

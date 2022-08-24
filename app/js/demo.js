@@ -58,15 +58,28 @@ let playerColour = {
 }
 */
 
+/*let playerColour = {
+  Player1: '#ff0000',
+  Player2: '#ba000d',
+  Player3: '#ff94c2',
+  Player4: '#FF7F00', // changed
+  Player5: '#ffd149',
+  Player6: '#6A3D9A', // changed
+  Player7: '#00B8D1',
+  Player8: '#00B827',
+  Player9: '#5BB58A',
+  Player10: '#9B8BD6'
+}*/
+
 let playerColour = {
   Player1: '#ff0000',
   Player2: '#ba000d',
   Player3: '#ff94c2',
-  Player4: '#FF7F00',
+  Player4: '#FF7F00', // changed
   Player5: '#ffd149',
-  Player6: '#6A3D9A',
+  Player6: '#000080', // changed
   Player7: '#00B8D1',
-  Player8: '#00B827',
+  Player8: '#006400', // changed
   Player9: '#5BB58A',
   Player10: '#9B8BD6',
 }
@@ -516,8 +529,8 @@ function timeline() {
   sections = totalTimestamp / 180000 // 3 mins interval
   sectionsForText = totalTimestamp / 60000
   console.log(sections)
-  // let accumTimestamp = totalTimestamp / sections
-  let accumTimestampForText = totalTimestamp / sectionsForText
+  let accumTimestamp = totalTimestamp / sections
+  // let accumTimestampForText = totalTimestamp / sectionsForText
   let timeAidedLine
   let markInBetween
   const distance =
@@ -546,9 +559,9 @@ function timeline() {
   for (let segments = 0; segments < sectionsForText; segments++) {
     // write labels
     let txt = svg.text(
-      70 + distanceForText * segments + 95 + 70 + 100,
+      70 + distance * segments + 95 + 70 + 100,
       1120 + 20 + 60,
-      timeStamp(accumTimestampForText * segments)
+      timeStamp(accumTimestamp * segments)
     )
 
     // draw vertical lines
@@ -561,15 +574,9 @@ function timeline() {
       'stroke-dasharray': '4',
     })
 
-    if ((segments + 1) % 3 == 1) {
-      txt.attr({
-        'font-size': 30,
-      })
-    } else {
-      txt.attr({
-        'font-size': 15,
-      })
-    }
+    txt.attr({
+      'font-size': 30,
+    })
   }
 }
 
@@ -682,7 +689,7 @@ function locationBox(locationSet, useMode) {
               // console.log(`../../src/image/sessionImgsSimple/${i + 1}.png`)
             } else if (useMode === 1) {
               img = svg.image(
-                `../../src/image/sessionImgsSimpleSpecial/${i + 1}.png`,
+                `../../src/image/sessionImgsSimpleSpecialR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -690,7 +697,7 @@ function locationBox(locationSet, useMode) {
               )
             } else {
               img = svg.image(
-                `../../src/image/MiniMaps/${i + 1}.png`,
+                `../../src/image/MiniMapsR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -748,7 +755,7 @@ function locationBox(locationSet, useMode) {
               // console.log(`../../src/image/sessionImgsSimple/${i + 1}.png`)
             } else if (useMode === 1) {
               img = svg.image(
-                `../../src/image/sessionImgsSimpleSpecial/${i + 1}.png`,
+                `../../src/image/sessionImgsSimpleSpecialR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -756,7 +763,7 @@ function locationBox(locationSet, useMode) {
               )
             } else {
               img = svg.image(
-                `../../src/image/MiniMaps/${i + 1}.png`,
+                `../../src/image/MiniMapsR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -821,7 +828,7 @@ function locationBox(locationSet, useMode) {
               )
             } else if (useMode === 1) {
               img = svg.image(
-                `../../src/image/sessionImgsSimpleSpecial/${i + 1}.png`,
+                `../../src/image/sessionImgsSimpleSpecialR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -829,7 +836,7 @@ function locationBox(locationSet, useMode) {
               )
             } else {
               img = svg.image(
-                `../../src/image/MiniMaps/${i + 1}.png`,
+                `../../src/image/MiniMapsR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -887,7 +894,7 @@ function locationBox(locationSet, useMode) {
               )
             } else if (useMode === 1) {
               img = svg.image(
-                `../../src/image/sessionImgsSimpleSpecial/${i + 1}.png`,
+                `../../src/image/sessionImgsSimpleSpecialR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -895,7 +902,7 @@ function locationBox(locationSet, useMode) {
               )
             } else {
               img = svg.image(
-                `../../src/image/MiniMaps/${i + 1}.png`,
+                `../../src/image/MiniMapsR/${i + 1}.png`,
                 tipX,
                 tipY,
                 tipWindowSize,
@@ -962,7 +969,7 @@ function locationBox(locationSet, useMode) {
         )
       } else {
         img = svg.image(
-          `../../src/image/MiniMaps/${i + 1}.png`,
+          `../../src/image/MiniMapsR/${i + 1}.png`,
           tipX + 25,
           tipY + 50,
           mapSize,
@@ -1086,7 +1093,7 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
               currentPlayer = 'Player' + String(playerIndex)
 
               border = svg.rect(tipX, tipY, 250, 325, 10, 10).attr({
-                stroke: playerColour[currentPlayer],
+                stroke: 'black',
                 fill: 'rgba(255,255,255, 0.9)',
                 strokeWidth: '3px',
               })
@@ -1151,7 +1158,7 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
               })
               innerCircle = svg
                 .circle(tipX + 25 + xOffset, tipY + 115 + yOffset, 4)
-                .attr({ fill: 'none', stroke: `white`, strokeWidth: '1px' })
+                .attr({ fill: 'none', stroke: `white`, strokeWidth: '3px' })
               killing = svg
                 .circle(tipX + 25 + xOffset, tipY + 115 + yOffset, 5)
                 .attr({
@@ -1190,7 +1197,19 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
           buildingType = data[i]['buildingType']
         }
 
-        let resultType = buildingType.replace('_', ' ')
+        // let resultType = buildingType.replace('_', ' ')
+
+        let index = buildingType.indexOf('_')
+
+        console.log(0, index)
+        console.log(buildingType.slice(0, index))
+        let resultType = []
+        resultType.push(buildingType.slice(0, index))
+        console.log(index + 1, buildingType.length)
+        console.log(buildingType.slice(index + 1))
+        resultType.push(buildingType.slice(index + 1))
+
+        console.log(resultType)
 
         let currentPlayer = 'Player' + String(playerIndex)
 
@@ -1205,6 +1224,12 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
         // console.log(currentPlayer, posX, posY)
 
         playerIndex = reverseId(playerIndex)
+        currentPlayer = 'Player' + String(playerIndex)
+
+        let borderColour = playerColour[currentPlayer]
+
+        playerIndex = reverseId(playerIndex)
+        currentPlayer = 'Player' + String(playerIndex)
 
         let mask, img
 
@@ -1245,13 +1270,16 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
               let xOffset = (posX / 15000) * 200
               let yOffset = 200 - (posY / 15000) * 200
 
-              currentPlayer = 'Player' + String(playerIndex)
-
               border = svg.rect(tipX, tipY, 250, 310, 10, 10).attr({
                 stroke: `Black`,
                 fill: 'rgba(255,255,255, 0.9)',
                 strokeWidth: '3px',
               })
+
+              killerName =
+                participantsInfo[participantsInfo.indexOf(playerIndex) + 1]
+
+              console.log(killerName)
 
               killerIcon = svg.image(
                 `../../src/image/Champions/${killerName}Square.png`,
@@ -1263,18 +1291,21 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
 
               killerBorder = svg.rect(35 + tipX, 37 + tipY - 3, 46, 46).attr({
                 fill: 'none',
-                stroke: `${playerColour[currentPlayer]}`,
+                stroke: `${borderColour}`,
                 'stroke-width': '3',
                 opacity: 0.7,
               })
 
-              console.log(killerBorder)
-
-              killerName =
-                participantsInfo[participantsInfo.indexOf(playerIndex) + 1]
-
               killer = svg.text(35 + tipX, 25 + tipY, 'KILLER: ')
-              victim = svg.text(85 + tipX, 62 + tipY, resultType)
+              // victim = svg.text(85 + tipX, 62 + tipY, resultType)
+
+              victim = svg
+                .text({ text: [resultType[0], resultType[1]] })
+                .selectAll('tspan')
+                .forEach(function(tspan, i) {
+                  tspan.attr({ x: 120 + tipX, y: 52 + tipY + 25 * i })
+                })
+
               killerNameElement = svg.text(
                 35 + tipX,
                 35 + 50 + 15 + tipY - 3,
@@ -1296,12 +1327,12 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
               })
               innerCircle = svg
                 .circle(tipX + 25 + xOffset, tipY + 100 + yOffset, 4)
-                .attr({ fill: 'none', stroke: `white`, strokeWidth: '1px' })
+                .attr({ fill: 'none', stroke: `white`, strokeWidth: '3px' })
               killing = svg
                 .circle(tipX + 25 + xOffset, tipY + 100 + yOffset, 5)
                 .attr({
                   fill: 'none',
-                  stroke: `${playerColour[currentPlayer]}`,
+                  stroke: `${borderColour}`,
                   strokeWidth: '2px',
                 })
             },
@@ -1329,7 +1360,7 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
 
     let killer, victim
 
-    let killerIcon
+    let killerIcon, killerBorder, killerNameElement
 
     const iconSize = 35
     const offset = iconSize / 2
@@ -1337,7 +1368,7 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
     let nexusKillPosX = graph.getCharacterX(nexusKiller, lastTimestamp)
     let nexusKillPosY = graph.getCharacterY(nexusKiller, lastTimestamp)
 
-    nexusKillerId = reverseId(nexusKillerId)
+    let reversedKillerId = reverseId(nexusKillerId)
 
     svg
       .image(
@@ -1357,33 +1388,47 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
           let tipX = pt.x
           let tipY = pt.y
 
-          if (pt.y >= 995) {
-            tipX -= 50
-            tipY -= 250
+          if (pt.y >= 850) {
+            // tipX -= 100
+            tipY -= 100
           }
 
-          if (pt.x >= 5700) {
-            tipX -= 200
+          if (pt.y >= 950) {
+            // tipX -= 100
+            tipY -= 200
           }
 
-          border = svg.rect(tipX, tipY, 220, 120, 10, 10).attr({
-            stroke: `${playerColour['Player' + nexusKillerId]}`,
+          border = svg.rect(tipX, tipY, 125, 130, 10, 10).attr({
+            stroke: `black`,
             fill: 'rgba(255,255,255, 0.9)',
             strokeWidth: '3px',
           })
 
-          killer = svg.text(35 + tipX, 25 + tipY, 'KILLER: ')
-          victim = svg.text(35 + tipX, 62 + tipY + 45, 'Nexus Kill')
+          killer = svg.text(35 + tipX, 25 + tipY + 2, 'KILLER: ')
+          victim = svg.text(35 + tipX, 62 + tipY + 45 + 13, 'Nexus Kill')
 
           let killerName =
             participantsInfo[participantsInfo.indexOf(nexusKillerId) + 1]
 
           killerIcon = svg.image(
             `../../src/image/Champions/${killerName}Square.png`,
-            35 + tipX,
-            35 + tipY,
+            38 + tipX,
+            40 + tipY - 3,
             40,
             40
+          )
+
+          killerBorder = svg.rect(35 + tipX, 37 + tipY - 3, 46, 46).attr({
+            fill: 'none',
+            stroke: `${playerColour['Player' + reversedKillerId]}`,
+            'stroke-width': '3',
+            opacity: 0.7,
+          })
+
+          killerNameElement = svg.text(
+            35 + tipX,
+            35 + 50 + 15 + tipY - 3,
+            killerName
           )
         },
         () => {
@@ -1391,6 +1436,8 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
           killer.remove()
           killerIcon.remove()
           victim.remove()
+          killerBorder.remove()
+          killerNameElement.remove()
         }
       )
   })
