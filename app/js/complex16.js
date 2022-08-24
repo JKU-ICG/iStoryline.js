@@ -114,18 +114,6 @@ async function main(fileName) {
     participantsInfo.push(element['participantId'], element['championName'])
   }
 
-  let nexusKiller = null
-  let nexusKillerId = null
-
-  for (const element of participantsInfoData) {
-    if (element['nexusKills'] == 1) {
-      nexusKillerId = element['participantId']
-      nexusKiller = 'Player' + nexusKillerId
-    }
-  }
-
-  console.log(nexusKiller)
-
   let dbscan = await jsonDBSCAN.then(function(result) {
     dbSCANData = result
   })
@@ -198,7 +186,7 @@ async function main(fileName) {
     )
   })
 
-  await drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId)
+  await drawEvents(graph, participantsInfo)
 
   await timelineX(graph)
 
@@ -1005,7 +993,7 @@ function locationBox(locationSet, useMode) {
   }
 }
 
-async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
+async function drawEvents(graph, participantsInfo) {
   await jsonReadTwo.then(function(result) {
     const data = result
     for (let i in data) {
@@ -1353,93 +1341,6 @@ async function drawEvents(graph, participantsInfo, nexusKiller, nexusKillerId) {
 
       lastTimestamp = data[i]['timestamp']
     }
-
-    // draw the final nexus kill
-
-    let border
-
-    let killer, victim
-
-    let killerIcon, killerBorder, killerNameElement
-
-    const iconSize = 35
-    const offset = iconSize / 2
-
-    let nexusKillPosX = graph.getCharacterX(nexusKiller, lastTimestamp)
-    let nexusKillPosY = graph.getCharacterY(nexusKiller, lastTimestamp)
-
-    let reversedKillerId = reverseId(nexusKillerId)
-
-    svg
-      .image(
-        `../../src/image/Turrets/${nexusKiller}.png`,
-        nexusKillPosX - offset,
-        nexusKillPosY - offset,
-        iconSize,
-        iconSize
-      )
-      .hover(
-        event => {
-          pt.x = event.clientX
-          pt.y = event.clientY
-
-          pt = pt.matrixTransform(mySvg.getScreenCTM().inverse())
-
-          let tipX = pt.x
-          let tipY = pt.y
-
-          if (pt.y >= 850) {
-            // tipX -= 100
-            tipY -= 100
-          }
-
-          if (pt.y >= 950) {
-            // tipX -= 100
-            tipY -= 200
-          }
-
-          border = svg.rect(tipX, tipY, 125, 130, 10, 10).attr({
-            stroke: `black`,
-            fill: 'rgba(255,255,255, 0.9)',
-            strokeWidth: '3px',
-          })
-
-          killer = svg.text(35 + tipX, 25 + tipY + 2, 'KILLER: ')
-          victim = svg.text(35 + tipX, 62 + tipY + 45 + 13, 'Nexus Kill')
-
-          let killerName =
-            participantsInfo[participantsInfo.indexOf(nexusKillerId) + 1]
-
-          killerIcon = svg.image(
-            `../../src/image/Champions/${killerName}Square.png`,
-            38 + tipX,
-            40 + tipY - 3,
-            40,
-            40
-          )
-
-          killerBorder = svg.rect(35 + tipX, 37 + tipY - 3, 46, 46).attr({
-            fill: 'none',
-            stroke: `${playerColour['Player' + reversedKillerId]}`,
-            'stroke-width': '3',
-            opacity: 0.7,
-          })
-
-          killerNameElement = svg.text(
-            35 + tipX,
-            35 + 50 + 15 + tipY - 3,
-            killerName
-          )
-        },
-        () => {
-          border.remove()
-          killer.remove()
-          killerIcon.remove()
-          victim.remove()
-          killerBorder.remove()
-          killerNameElement.remove()
-        }
-      )
   })
 }
 
