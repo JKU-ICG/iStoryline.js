@@ -1,0 +1,3795 @@
+{
+  "Story": {
+    "Locations": {
+      "RedBase": [1],
+      "RedBottomLane": [2],
+      "BottomBlueJungle": [3],
+      "RedMiddleLane": [4],
+      "TopRedJungle": [5],
+      "RedTopLane": [6],
+      "ContestedBottom": [7],
+      "BottomRiver": [8],
+      "ContestedMiddle": [9],
+      "TopRiver": [10],
+      "ContestedTop": [11],
+      "BlueBottomLane": [12],
+      "BottomRedJungle": [13],
+      "BlueMiddleLane": [14],
+      "TopBlueJungle": [15],
+      "BlueTopLane": [16],
+      "BlueBase": [17]
+    },
+    "Characters": {
+      "Player1": [
+        {
+          "Start": 0,
+          "End": 60003,
+          "Session": 17
+        },
+        {
+          "Start": 60003,
+          "End": 120025,
+          "Session": 16
+        },
+        {
+          "Start": 120025,
+          "End": 180048,
+          "Session": 11
+        },
+        {
+          "Start": 180048,
+          "End": 240058,
+          "Session": 16
+        },
+        {
+          "Start": 240058,
+          "End": 300083,
+          "Session": 6
+        },
+        {
+          "Start": 300083,
+          "End": 360096,
+          "Session": 16
+        },
+        {
+          "Start": 360096,
+          "End": 405872,
+          "Session": 11
+        },
+        {
+          "Start": 405872,
+          "End": 420116,
+          "Session": 11
+        },
+        {
+          "Start": 420116,
+          "End": 466807,
+          "Session": 15
+        },
+        {
+          "Start": 466807,
+          "End": 471807,
+          "Session": 11
+        },
+        {
+          "Start": 471807,
+          "End": 472807,
+          "Session": 11
+        },
+        {
+          "Start": 472807,
+          "End": 480143,
+          "Session": 17
+        },
+        {
+          "Start": 480143,
+          "End": 540166,
+          "Session": 11
+        },
+        {
+          "Start": 540166,
+          "End": 600188,
+          "Session": 16
+        },
+        {
+          "Start": 600188,
+          "End": 660217,
+          "Session": 11
+        },
+        {
+          "Start": 660217,
+          "End": 675709,
+          "Session": 11
+        },
+        {
+          "Start": 675709,
+          "End": 720236,
+          "Session": 11
+        },
+        {
+          "Start": 720236,
+          "End": 780237,
+          "Session": 16
+        },
+        {
+          "Start": 780237,
+          "End": 840253,
+          "Session": 10
+        },
+        {
+          "Start": 840253,
+          "End": 881969,
+          "Session": 11
+        },
+        {
+          "Start": 881969,
+          "End": 900280,
+          "Session": 11
+        },
+        {
+          "Start": 900280,
+          "End": 919934,
+          "Session": 11
+        },
+        {
+          "Start": 919934,
+          "End": 935601,
+          "Session": 6
+        },
+        {
+          "Start": 935601,
+          "End": 940601,
+          "Session": 6
+        },
+        {
+          "Start": 940601,
+          "End": 960301,
+          "Session": 6
+        },
+        {
+          "Start": 960301,
+          "End": 1020327,
+          "Session": 6
+        },
+        {
+          "Start": 1020327,
+          "End": 1072384,
+          "Session": 16
+        },
+        {
+          "Start": 1072384,
+          "End": 1080343,
+          "Session": 6
+        },
+        {
+          "Start": 1080343,
+          "End": 1089700,
+          "Session": 6
+        },
+        {
+          "Start": 1089700,
+          "End": 1094700,
+          "Session": 6
+        },
+        {
+          "Start": 1094700,
+          "End": 1140372,
+          "Session": 6
+        },
+        {
+          "Start": 1140372,
+          "End": 1189429,
+          "Session": 10
+        },
+        {
+          "Start": 1189429,
+          "End": 1194429,
+          "Session": 8
+        },
+        {
+          "Start": 1194429,
+          "End": 1195429,
+          "Session": 8
+        },
+        {
+          "Start": 1195429,
+          "End": 1200387,
+          "Session": 17
+        },
+        {
+          "Start": 1200387,
+          "End": 1260408,
+          "Session": 8
+        },
+        {
+          "Start": 1260408,
+          "End": 1320425,
+          "Session": 11
+        },
+        {
+          "Start": 1320425,
+          "End": 1336549,
+          "Session": 6
+        },
+        {
+          "Start": 1336549,
+          "End": 1348278,
+          "Session": 1
+        },
+        {
+          "Start": 1348278,
+          "End": 1380430,
+          "Session": 1
+        },
+        {
+          "Start": 1380430,
+          "End": 1400380,
+          "Session": 13
+        },
+        {
+          "Start": 1400380,
+          "End": 1440444,
+          "Session": 8
+        },
+        {
+          "Start": 1440444,
+          "End": 1500455,
+          "Session": 14
+        },
+        {
+          "Start": 1500455,
+          "End": 1560469,
+          "Session": 15
+        },
+        {
+          "Start": 1560469,
+          "End": 1599641,
+          "Session": 2
+        },
+        {
+          "Start": 1599641,
+          "End": 1607799,
+          "Session": 2
+        },
+        {
+          "Start": 1607799,
+          "End": 1614188,
+          "Session": 2
+        },
+        {
+          "Start": 1614188,
+          "End": 1619188,
+          "Session": 3
+        },
+        {
+          "Start": 1619188,
+          "End": 1620495,
+          "Session": 3
+        },
+        {
+          "Start": 1620495,
+          "End": 1645342,
+          "Session": 2
+        },
+        {
+          "Start": 1645342,
+          "End": 1650342,
+          "Session": 1
+        },
+        {
+          "Start": 1650342,
+          "End": 1651342,
+          "Session": 1
+        },
+        {
+          "Start": 1651342,
+          "End": 1680512,
+          "Session": 17
+        },
+        {
+          "Start": 1680512,
+          "End": 1727484,
+          "Session": 1
+        },
+        {
+          "Start": 1727484,
+          "End": 1740514,
+          "Session": 9
+        },
+        {
+          "Start": 1740514,
+          "End": 1778705,
+          "Session": 9
+        },
+        {
+          "Start": 1778705,
+          "End": 1783705,
+          "Session": 13
+        },
+        {
+          "Start": 1783705,
+          "End": 1784705,
+          "Session": 13
+        },
+        {
+          "Start": 1784705,
+          "End": 1800526,
+          "Session": 17
+        },
+        {
+          "Start": 1800526,
+          "End": 1860549,
+          "Session": 13
+        },
+        {
+          "Start": 1860549,
+          "End": 1920561,
+          "Session": 15
+        },
+        {
+          "Start": 1920561,
+          "End": 1980592,
+          "Session": 8
+        },
+        {
+          "Start": 1980592,
+          "End": 2031461,
+          "Session": 17
+        },
+        {
+          "Start": 2031461,
+          "End": 2040610,
+          "Session": 9
+        },
+        {
+          "Start": 2040610,
+          "End": 2050949,
+          "Session": 9
+        },
+        {
+          "Start": 2050949,
+          "End": 2070648,
+          "Session": 9
+        },
+        {
+          "Start": 2070648,
+          "End": 2075007,
+          "Session": 1
+        },
+        {
+          "Start": 2075007,
+          "End": 2075648,
+          "Session": 1
+        },
+        {
+          "Start": 2075648,
+          "End": 2080007,
+          "Session": 1
+        },
+        {
+          "Start": 2080007,
+          "End": 2100640,
+          "Session": 1
+        },
+        {
+          "Start": 2100640,
+          "End": 2116327,
+          "Session": 1
+        },
+        {
+          "Start": 2116327,
+          "End": 2137893,
+          "Session": 1
+        },
+        {
+          "Start": 2137893,
+          "End": 2159140,
+          "Session": 1
+        },
+        {
+          "Start": 2159140,
+          "End": 2164140,
+          "Session": 1
+        },
+        {
+          "Start": 2164140,
+          "End": 2165548,
+          "Session": 1
+        },
+        {
+          "Start": 2165548,
+          "End": 2170548,
+          "Session": 1
+        },
+        {
+          "Start": 2170548,
+          "End": 2191762,
+          "Session": 1
+        },
+        {
+          "Start": 2191762,
+          "End": 2220680,
+          "Session": 1
+        },
+        {
+          "Start": 2220680,
+          "End": 2261502,
+          "Session": 5
+        },
+        {
+          "Start": 2261502,
+          "End": 2278417,
+          "Session": 1
+        },
+        {
+          "Start": 2278417,
+          "End": 2278417,
+          "Session": 1
+        }
+      ],
+      "Player2": [
+        {
+          "Start": 0,
+          "End": 60003,
+          "Session": 17
+        },
+        {
+          "Start": 60003,
+          "End": 120025,
+          "Session": 13
+        },
+        {
+          "Start": 120025,
+          "End": 180048,
+          "Session": 13
+        },
+        {
+          "Start": 180048,
+          "End": 240058,
+          "Session": 15
+        },
+        {
+          "Start": 240058,
+          "End": 300083,
+          "Session": 9
+        },
+        {
+          "Start": 300083,
+          "End": 360096,
+          "Session": 13
+        },
+        {
+          "Start": 360096,
+          "End": 389754,
+          "Session": 17
+        },
+        {
+          "Start": 389754,
+          "End": 420116,
+          "Session": 8
+        },
+        {
+          "Start": 420116,
+          "End": 472345,
+          "Session": 15
+        },
+        {
+          "Start": 472345,
+          "End": 480143,
+          "Session": 11
+        },
+        {
+          "Start": 480143,
+          "End": 540166,
+          "Session": 16
+        },
+        {
+          "Start": 540166,
+          "End": 600188,
+          "Session": 13
+        },
+        {
+          "Start": 600188,
+          "End": 660217,
+          "Session": 13
+        },
+        {
+          "Start": 660217,
+          "End": 668420,
+          "Session": 3
+        },
+        {
+          "Start": 668420,
+          "End": 673420,
+          "Session": 8
+        },
+        {
+          "Start": 673420,
+          "End": 674420,
+          "Session": 8
+        },
+        {
+          "Start": 674420,
+          "End": 720236,
+          "Session": 17
+        },
+        {
+          "Start": 720236,
+          "End": 774810,
+          "Session": 15
+        },
+        {
+          "Start": 774810,
+          "End": 780237,
+          "Session": 8
+        },
+        {
+          "Start": 780237,
+          "End": 825422,
+          "Session": 13
+        },
+        {
+          "Start": 825422,
+          "End": 840253,
+          "Session": 7
+        },
+        {
+          "Start": 840253,
+          "End": 900280,
+          "Session": 12
+        },
+        {
+          "Start": 900280,
+          "End": 960301,
+          "Session": 15
+        },
+        {
+          "Start": 960301,
+          "End": 983327,
+          "Session": 8
+        },
+        {
+          "Start": 983327,
+          "End": 985088,
+          "Session": 8
+        },
+        {
+          "Start": 985088,
+          "End": 990088,
+          "Session": 8
+        },
+        {
+          "Start": 990088,
+          "End": 991088,
+          "Session": 8
+        },
+        {
+          "Start": 991088,
+          "End": 1020327,
+          "Session": 17
+        },
+        {
+          "Start": 1020327,
+          "End": 1059337,
+          "Session": 17
+        },
+        {
+          "Start": 1059337,
+          "End": 1080343,
+          "Session": 8
+        },
+        {
+          "Start": 1080343,
+          "End": 1140372,
+          "Session": 15
+        },
+        {
+          "Start": 1140372,
+          "End": 1190044,
+          "Session": 14
+        },
+        {
+          "Start": 1190044,
+          "End": 1200387,
+          "Session": 10
+        },
+        {
+          "Start": 1200387,
+          "End": 1260408,
+          "Session": 8
+        },
+        {
+          "Start": 1260408,
+          "End": 1283066,
+          "Session": 15
+        },
+        {
+          "Start": 1283066,
+          "End": 1320425,
+          "Session": 9
+        },
+        {
+          "Start": 1320425,
+          "End": 1380430,
+          "Session": 5
+        },
+        {
+          "Start": 1380430,
+          "End": 1420098,
+          "Session": 4
+        },
+        {
+          "Start": 1420098,
+          "End": 1433606,
+          "Session": 3
+        },
+        {
+          "Start": 1433606,
+          "End": 1440444,
+          "Session": 3
+        },
+        {
+          "Start": 1440444,
+          "End": 1500455,
+          "Session": 8
+        },
+        {
+          "Start": 1500455,
+          "End": 1545251,
+          "Session": 17
+        },
+        {
+          "Start": 1545251,
+          "End": 1550251,
+          "Session": 7
+        },
+        {
+          "Start": 1550251,
+          "End": 1551251,
+          "Session": 7
+        },
+        {
+          "Start": 1551251,
+          "End": 1560469,
+          "Session": 17
+        },
+        {
+          "Start": 1560469,
+          "End": 1620495,
+          "Session": 7
+        },
+        {
+          "Start": 1620495,
+          "End": 1627168,
+          "Session": 14
+        },
+        {
+          "Start": 1627168,
+          "End": 1680512,
+          "Session": 9
+        },
+        {
+          "Start": 1680512,
+          "End": 1740514,
+          "Session": 10
+        },
+        {
+          "Start": 1740514,
+          "End": 1741416,
+          "Session": 10
+        },
+        {
+          "Start": 1741416,
+          "End": 1746416,
+          "Session": 10
+        },
+        {
+          "Start": 1746416,
+          "End": 1747416,
+          "Session": 10
+        },
+        {
+          "Start": 1747416,
+          "End": 1800526,
+          "Session": 17
+        },
+        {
+          "Start": 1800526,
+          "End": 1840997,
+          "Session": 17
+        },
+        {
+          "Start": 1840997,
+          "End": 1845997,
+          "Session": 9
+        },
+        {
+          "Start": 1845997,
+          "End": 1846997,
+          "Session": 9
+        },
+        {
+          "Start": 1846997,
+          "End": 1860549,
+          "Session": 17
+        },
+        {
+          "Start": 1860549,
+          "End": 1920561,
+          "Session": 9
+        },
+        {
+          "Start": 1920561,
+          "End": 1980592,
+          "Session": 13
+        },
+        {
+          "Start": 1980592,
+          "End": 2040610,
+          "Session": 9
+        },
+        {
+          "Start": 2040610,
+          "End": 2045830,
+          "Session": 13
+        },
+        {
+          "Start": 2045830,
+          "End": 2100640,
+          "Session": 13
+        },
+        {
+          "Start": 2100640,
+          "End": 2160649,
+          "Session": 1
+        },
+        {
+          "Start": 2160649,
+          "End": 2163037,
+          "Session": 1
+        },
+        {
+          "Start": 2163037,
+          "End": 2168037,
+          "Session": 1
+        },
+        {
+          "Start": 2168037,
+          "End": 2169037,
+          "Session": 1
+        },
+        {
+          "Start": 2169037,
+          "End": 2220680,
+          "Session": 17
+        },
+        {
+          "Start": 2220680,
+          "End": 2278417,
+          "Session": 1
+        },
+        {
+          "Start": 2278417,
+          "End": 2278417,
+          "Session": 1
+        }
+      ],
+      "Player3": [
+        {
+          "Start": 0,
+          "End": 60003,
+          "Session": 17
+        },
+        {
+          "Start": 60003,
+          "End": 120025,
+          "Session": 14
+        },
+        {
+          "Start": 120025,
+          "End": 180048,
+          "Session": 9
+        },
+        {
+          "Start": 180048,
+          "End": 205973,
+          "Session": 9
+        },
+        {
+          "Start": 205973,
+          "End": 240058,
+          "Session": 9
+        },
+        {
+          "Start": 240058,
+          "End": 300083,
+          "Session": 17
+        },
+        {
+          "Start": 300083,
+          "End": 360096,
+          "Session": 14
+        },
+        {
+          "Start": 360096,
+          "End": 420116,
+          "Session": 17
+        },
+        {
+          "Start": 420116,
+          "End": 480143,
+          "Session": 9
+        },
+        {
+          "Start": 480143,
+          "End": 510993,
+          "Session": 9
+        },
+        {
+          "Start": 510993,
+          "End": 540166,
+          "Session": 5
+        },
+        {
+          "Start": 540166,
+          "End": 600188,
+          "Session": 9
+        },
+        {
+          "Start": 600188,
+          "End": 624342,
+          "Session": 9
+        },
+        {
+          "Start": 624342,
+          "End": 629342,
+          "Session": 9
+        },
+        {
+          "Start": 629342,
+          "End": 630342,
+          "Session": 9
+        },
+        {
+          "Start": 630342,
+          "End": 660217,
+          "Session": 17
+        },
+        {
+          "Start": 660217,
+          "End": 720236,
+          "Session": 17
+        },
+        {
+          "Start": 720236,
+          "End": 749177,
+          "Session": 12
+        },
+        {
+          "Start": 749177,
+          "End": 780237,
+          "Session": 3
+        },
+        {
+          "Start": 780237,
+          "End": 840253,
+          "Session": 13
+        },
+        {
+          "Start": 840253,
+          "End": 900280,
+          "Session": 17
+        },
+        {
+          "Start": 900280,
+          "End": 912701,
+          "Session": 9
+        },
+        {
+          "Start": 912701,
+          "End": 926077,
+          "Session": 4
+        },
+        {
+          "Start": 926077,
+          "End": 960301,
+          "Session": 10
+        },
+        {
+          "Start": 960301,
+          "End": 1020327,
+          "Session": 13
+        },
+        {
+          "Start": 1020327,
+          "End": 1066316,
+          "Session": 13
+        },
+        {
+          "Start": 1066316,
+          "End": 1071316,
+          "Session": 14
+        },
+        {
+          "Start": 1071316,
+          "End": 1072316,
+          "Session": 14
+        },
+        {
+          "Start": 1072316,
+          "End": 1080343,
+          "Session": 17
+        },
+        {
+          "Start": 1080343,
+          "End": 1140372,
+          "Session": 14
+        },
+        {
+          "Start": 1140372,
+          "End": 1198141,
+          "Session": 14
+        },
+        {
+          "Start": 1198141,
+          "End": 1200387,
+          "Session": 8
+        },
+        {
+          "Start": 1200387,
+          "End": 1260408,
+          "Session": 13
+        },
+        {
+          "Start": 1260408,
+          "End": 1271934,
+          "Session": 9
+        },
+        {
+          "Start": 1271934,
+          "End": 1306454,
+          "Session": 9
+        },
+        {
+          "Start": 1306454,
+          "End": 1320425,
+          "Session": 9
+        },
+        {
+          "Start": 1320425,
+          "End": 1380430,
+          "Session": 9
+        },
+        {
+          "Start": 1380430,
+          "End": 1440444,
+          "Session": 7
+        },
+        {
+          "Start": 1440444,
+          "End": 1448171,
+          "Session": 3
+        },
+        {
+          "Start": 1448171,
+          "End": 1500455,
+          "Session": 8
+        },
+        {
+          "Start": 1500455,
+          "End": 1524334,
+          "Session": 8
+        },
+        {
+          "Start": 1524334,
+          "End": 1560469,
+          "Session": 8
+        },
+        {
+          "Start": 1560469,
+          "End": 1567934,
+          "Session": 3
+        },
+        {
+          "Start": 1567934,
+          "End": 1583898,
+          "Session": 2
+        },
+        {
+          "Start": 1583898,
+          "End": 1588898,
+          "Session": 2
+        },
+        {
+          "Start": 1588898,
+          "End": 1589898,
+          "Session": 2
+        },
+        {
+          "Start": 1589898,
+          "End": 1620495,
+          "Session": 17
+        },
+        {
+          "Start": 1620495,
+          "End": 1680512,
+          "Session": 2
+        },
+        {
+          "Start": 1680512,
+          "End": 1707766,
+          "Session": 9
+        },
+        {
+          "Start": 1707766,
+          "End": 1728881,
+          "Session": 9
+        },
+        {
+          "Start": 1728881,
+          "End": 1733881,
+          "Session": 9
+        },
+        {
+          "Start": 1733881,
+          "End": 1734881,
+          "Session": 9
+        },
+        {
+          "Start": 1734881,
+          "End": 1740514,
+          "Session": 17
+        },
+        {
+          "Start": 1740514,
+          "End": 1800526,
+          "Session": 9
+        },
+        {
+          "Start": 1800526,
+          "End": 1860549,
+          "Session": 17
+        },
+        {
+          "Start": 1860549,
+          "End": 1920561,
+          "Session": 17
+        },
+        {
+          "Start": 1920561,
+          "End": 1980592,
+          "Session": 17
+        },
+        {
+          "Start": 1980592,
+          "End": 2040610,
+          "Session": 17
+        },
+        {
+          "Start": 2040610,
+          "End": 2100640,
+          "Session": 17
+        },
+        {
+          "Start": 2100640,
+          "End": 2160649,
+          "Session": 17
+        },
+        {
+          "Start": 2160649,
+          "End": 2220680,
+          "Session": 17
+        },
+        {
+          "Start": 2220680,
+          "End": 2278417,
+          "Session": 17
+        },
+        {
+          "Start": 2278417,
+          "End": 2278417,
+          "Session": 17
+        }
+      ],
+      "Player4": [
+        {
+          "Start": 0,
+          "End": 60003,
+          "Session": 17
+        },
+        {
+          "Start": 60003,
+          "End": 120025,
+          "Session": 13
+        },
+        {
+          "Start": 120025,
+          "End": 180048,
+          "Session": 13
+        },
+        {
+          "Start": 180048,
+          "End": 240058,
+          "Session": 12
+        },
+        {
+          "Start": 240058,
+          "End": 300083,
+          "Session": 12
+        },
+        {
+          "Start": 300083,
+          "End": 346103,
+          "Session": 7
+        },
+        {
+          "Start": 346103,
+          "End": 351103,
+          "Session": 7
+        },
+        {
+          "Start": 351103,
+          "End": 352103,
+          "Session": 7
+        },
+        {
+          "Start": 352103,
+          "End": 360096,
+          "Session": 17
+        },
+        {
+          "Start": 360096,
+          "End": 420116,
+          "Session": 7
+        },
+        {
+          "Start": 420116,
+          "End": 467798,
+          "Session": 13
+        },
+        {
+          "Start": 467798,
+          "End": 472798,
+          "Session": 7
+        },
+        {
+          "Start": 472798,
+          "End": 473798,
+          "Session": 7
+        },
+        {
+          "Start": 473798,
+          "End": 480143,
+          "Session": 17
+        },
+        {
+          "Start": 480143,
+          "End": 540166,
+          "Session": 7
+        },
+        {
+          "Start": 540166,
+          "End": 600188,
+          "Session": 12
+        },
+        {
+          "Start": 600188,
+          "End": 646165,
+          "Session": 12
+        },
+        {
+          "Start": 646165,
+          "End": 660217,
+          "Session": 10
+        },
+        {
+          "Start": 660217,
+          "End": 720236,
+          "Session": 9
+        },
+        {
+          "Start": 720236,
+          "End": 780237,
+          "Session": 12
+        },
+        {
+          "Start": 780237,
+          "End": 805738,
+          "Session": 13
+        },
+        {
+          "Start": 805738,
+          "End": 840253,
+          "Session": 9
+        },
+        {
+          "Start": 840253,
+          "End": 900280,
+          "Session": 14
+        },
+        {
+          "Start": 900280,
+          "End": 931439,
+          "Session": 9
+        },
+        {
+          "Start": 931439,
+          "End": 936439,
+          "Session": 9
+        },
+        {
+          "Start": 936439,
+          "End": 937439,
+          "Session": 9
+        },
+        {
+          "Start": 937439,
+          "End": 960301,
+          "Session": 17
+        },
+        {
+          "Start": 960301,
+          "End": 1020327,
+          "Session": 9
+        },
+        {
+          "Start": 1020327,
+          "End": 1070535,
+          "Session": 13
+        },
+        {
+          "Start": 1070535,
+          "End": 1080343,
+          "Session": 14
+        },
+        {
+          "Start": 1080343,
+          "End": 1089591,
+          "Session": 15
+        },
+        {
+          "Start": 1089591,
+          "End": 1140372,
+          "Session": 15
+        },
+        {
+          "Start": 1140372,
+          "End": 1186025,
+          "Session": 12
+        },
+        {
+          "Start": 1186025,
+          "End": 1191025,
+          "Session": 14
+        },
+        {
+          "Start": 1191025,
+          "End": 1192025,
+          "Session": 14
+        },
+        {
+          "Start": 1192025,
+          "End": 1200387,
+          "Session": 17
+        },
+        {
+          "Start": 1200387,
+          "End": 1257941,
+          "Session": 14
+        },
+        {
+          "Start": 1257941,
+          "End": 1262941,
+          "Session": 10
+        },
+        {
+          "Start": 1262941,
+          "End": 1263941,
+          "Session": 10
+        },
+        {
+          "Start": 1263941,
+          "End": 1320425,
+          "Session": 17
+        },
+        {
+          "Start": 1320425,
+          "End": 1380430,
+          "Session": 17
+        },
+        {
+          "Start": 1380430,
+          "End": 1395601,
+          "Session": 7
+        },
+        {
+          "Start": 1395601,
+          "End": 1400601,
+          "Session": 3
+        },
+        {
+          "Start": 1400601,
+          "End": 1440444,
+          "Session": 3
+        },
+        {
+          "Start": 1440444,
+          "End": 1443128,
+          "Session": 8
+        },
+        {
+          "Start": 1443128,
+          "End": 1448128,
+          "Session": 8
+        },
+        {
+          "Start": 1448128,
+          "End": 1449128,
+          "Session": 8
+        },
+        {
+          "Start": 1449128,
+          "End": 1500455,
+          "Session": 17
+        },
+        {
+          "Start": 1500455,
+          "End": 1531864,
+          "Session": 17
+        },
+        {
+          "Start": 1531864,
+          "End": 1560469,
+          "Session": 4
+        },
+        {
+          "Start": 1560469,
+          "End": 1620495,
+          "Session": 13
+        },
+        {
+          "Start": 1620495,
+          "End": 1628664,
+          "Session": 2
+        },
+        {
+          "Start": 1628664,
+          "End": 1633664,
+          "Session": 1
+        },
+        {
+          "Start": 1633664,
+          "End": 1642294,
+          "Session": 1
+        },
+        {
+          "Start": 1642294,
+          "End": 1654722,
+          "Session": 1
+        },
+        {
+          "Start": 1654722,
+          "End": 1659722,
+          "Session": 2
+        },
+        {
+          "Start": 1659722,
+          "End": 1660722,
+          "Session": 2
+        },
+        {
+          "Start": 1660722,
+          "End": 1680512,
+          "Session": 17
+        },
+        {
+          "Start": 1680512,
+          "End": 1738946,
+          "Session": 2
+        },
+        {
+          "Start": 1738946,
+          "End": 1740514,
+          "Session": 9
+        },
+        {
+          "Start": 1740514,
+          "End": 1746931,
+          "Session": 9
+        },
+        {
+          "Start": 1746931,
+          "End": 1751931,
+          "Session": 4
+        },
+        {
+          "Start": 1751931,
+          "End": 1774667,
+          "Session": 4
+        },
+        {
+          "Start": 1774667,
+          "End": 1788999,
+          "Session": 8
+        },
+        {
+          "Start": 1788999,
+          "End": 1789736,
+          "Session": 8
+        },
+        {
+          "Start": 1789736,
+          "End": 1794736,
+          "Session": 13
+        },
+        {
+          "Start": 1794736,
+          "End": 1795736,
+          "Session": 13
+        },
+        {
+          "Start": 1795736,
+          "End": 1800526,
+          "Session": 17
+        },
+        {
+          "Start": 1800526,
+          "End": 1860549,
+          "Session": 13
+        },
+        {
+          "Start": 1860549,
+          "End": 1872605,
+          "Session": 17
+        },
+        {
+          "Start": 1872605,
+          "End": 1920561,
+          "Session": 17
+        },
+        {
+          "Start": 1920561,
+          "End": 1954427,
+          "Session": 11
+        },
+        {
+          "Start": 1954427,
+          "End": 1959427,
+          "Session": 6
+        },
+        {
+          "Start": 1959427,
+          "End": 1960427,
+          "Session": 6
+        },
+        {
+          "Start": 1960427,
+          "End": 1980592,
+          "Session": 17
+        },
+        {
+          "Start": 1980592,
+          "End": 2040610,
+          "Session": 6
+        },
+        {
+          "Start": 2040610,
+          "End": 2100640,
+          "Session": 10
+        },
+        {
+          "Start": 2100640,
+          "End": 2160131,
+          "Session": 1
+        },
+        {
+          "Start": 2160131,
+          "End": 2165131,
+          "Session": 1
+        },
+        {
+          "Start": 2165131,
+          "End": 2220680,
+          "Session": 1
+        },
+        {
+          "Start": 2220680,
+          "End": 2278417,
+          "Session": 15
+        },
+        {
+          "Start": 2278417,
+          "End": 2278417,
+          "Session": 15
+        }
+      ],
+      "Player5": [
+        {
+          "Start": 0,
+          "End": 60003,
+          "Session": 17
+        },
+        {
+          "Start": 60003,
+          "End": 120025,
+          "Session": 13
+        },
+        {
+          "Start": 120025,
+          "End": 180048,
+          "Session": 13
+        },
+        {
+          "Start": 180048,
+          "End": 240058,
+          "Session": 12
+        },
+        {
+          "Start": 240058,
+          "End": 273418,
+          "Session": 12
+        },
+        {
+          "Start": 273418,
+          "End": 300083,
+          "Session": 8
+        },
+        {
+          "Start": 300083,
+          "End": 360096,
+          "Session": 7
+        },
+        {
+          "Start": 360096,
+          "End": 420116,
+          "Session": 12
+        },
+        {
+          "Start": 420116,
+          "End": 474470,
+          "Session": 8
+        },
+        {
+          "Start": 474470,
+          "End": 479470,
+          "Session": 12
+        },
+        {
+          "Start": 479470,
+          "End": 480143,
+          "Session": 12
+        },
+        {
+          "Start": 480143,
+          "End": 480470,
+          "Session": 12
+        },
+        {
+          "Start": 480470,
+          "End": 540166,
+          "Session": 17
+        },
+        {
+          "Start": 540166,
+          "End": 600188,
+          "Session": 17
+        },
+        {
+          "Start": 600188,
+          "End": 660217,
+          "Session": 12
+        },
+        {
+          "Start": 660217,
+          "End": 696419,
+          "Session": 13
+        },
+        {
+          "Start": 696419,
+          "End": 697519,
+          "Session": 12
+        },
+        {
+          "Start": 697519,
+          "End": 702519,
+          "Session": 12
+        },
+        {
+          "Start": 702519,
+          "End": 703519,
+          "Session": 12
+        },
+        {
+          "Start": 703519,
+          "End": 720236,
+          "Session": 17
+        },
+        {
+          "Start": 720236,
+          "End": 780237,
+          "Session": 12
+        },
+        {
+          "Start": 780237,
+          "End": 840253,
+          "Session": 12
+        },
+        {
+          "Start": 840253,
+          "End": 900280,
+          "Session": 11
+        },
+        {
+          "Start": 900280,
+          "End": 960301,
+          "Session": 11
+        },
+        {
+          "Start": 960301,
+          "End": 1020327,
+          "Session": 17
+        },
+        {
+          "Start": 1020327,
+          "End": 1071625,
+          "Session": 16
+        },
+        {
+          "Start": 1071625,
+          "End": 1080343,
+          "Session": 6
+        },
+        {
+          "Start": 1080343,
+          "End": 1140372,
+          "Session": 6
+        },
+        {
+          "Start": 1140372,
+          "End": 1189582,
+          "Session": 10
+        },
+        {
+          "Start": 1189582,
+          "End": 1197745,
+          "Session": 8
+        },
+        {
+          "Start": 1197745,
+          "End": 1198647,
+          "Session": 3
+        },
+        {
+          "Start": 1198647,
+          "End": 1203647,
+          "Session": 3
+        },
+        {
+          "Start": 1203647,
+          "End": 1204647,
+          "Session": 3
+        },
+        {
+          "Start": 1204647,
+          "End": 1260408,
+          "Session": 17
+        },
+        {
+          "Start": 1260408,
+          "End": 1320425,
+          "Session": 14
+        },
+        {
+          "Start": 1320425,
+          "End": 1350458,
+          "Session": 6
+        },
+        {
+          "Start": 1350458,
+          "End": 1380430,
+          "Session": 1
+        },
+        {
+          "Start": 1380430,
+          "End": 1440444,
+          "Session": 13
+        },
+        {
+          "Start": 1440444,
+          "End": 1500455,
+          "Session": 14
+        },
+        {
+          "Start": 1500455,
+          "End": 1560469,
+          "Session": 15
+        },
+        {
+          "Start": 1560469,
+          "End": 1620495,
+          "Session": 2
+        },
+        {
+          "Start": 1620495,
+          "End": 1680512,
+          "Session": 3
+        },
+        {
+          "Start": 1680512,
+          "End": 1740514,
+          "Session": 9
+        },
+        {
+          "Start": 1740514,
+          "End": 1745742,
+          "Session": 10
+        },
+        {
+          "Start": 1745742,
+          "End": 1750742,
+          "Session": 10
+        },
+        {
+          "Start": 1750742,
+          "End": 1751742,
+          "Session": 10
+        },
+        {
+          "Start": 1751742,
+          "End": 1800526,
+          "Session": 17
+        },
+        {
+          "Start": 1800526,
+          "End": 1842671,
+          "Session": 17
+        },
+        {
+          "Start": 1842671,
+          "End": 1860549,
+          "Session": 9
+        },
+        {
+          "Start": 1860549,
+          "End": 1920561,
+          "Session": 9
+        },
+        {
+          "Start": 1920561,
+          "End": 1980592,
+          "Session": 8
+        },
+        {
+          "Start": 1980592,
+          "End": 2040610,
+          "Session": 9
+        },
+        {
+          "Start": 2040610,
+          "End": 2100640,
+          "Session": 13
+        },
+        {
+          "Start": 2100640,
+          "End": 2160649,
+          "Session": 1
+        },
+        {
+          "Start": 2160649,
+          "End": 2220680,
+          "Session": 17
+        },
+        {
+          "Start": 2220680,
+          "End": 2270918,
+          "Session": 10
+        },
+        {
+          "Start": 2270918,
+          "End": 2278417,
+          "Session": 1
+        },
+        {
+          "Start": 2278417,
+          "End": 2278417,
+          "Session": 1
+        }
+      ],
+      "Player6": [
+        {
+          "Start": 0,
+          "End": 60003,
+          "Session": 1
+        },
+        {
+          "Start": 60003,
+          "End": 120025,
+          "Session": 10
+        },
+        {
+          "Start": 120025,
+          "End": 180048,
+          "Session": 11
+        },
+        {
+          "Start": 180048,
+          "End": 240058,
+          "Session": 11
+        },
+        {
+          "Start": 240058,
+          "End": 300083,
+          "Session": 1
+        },
+        {
+          "Start": 300083,
+          "End": 360096,
+          "Session": 11
+        },
+        {
+          "Start": 360096,
+          "End": 403372,
+          "Session": 11
+        },
+        {
+          "Start": 403372,
+          "End": 408372,
+          "Session": 11
+        },
+        {
+          "Start": 408372,
+          "End": 409372,
+          "Session": 11
+        },
+        {
+          "Start": 409372,
+          "End": 420116,
+          "Session": 1
+        },
+        {
+          "Start": 420116,
+          "End": 480143,
+          "Session": 11
+        },
+        {
+          "Start": 480143,
+          "End": 540166,
+          "Session": 11
+        },
+        {
+          "Start": 540166,
+          "End": 600188,
+          "Session": 11
+        },
+        {
+          "Start": 600188,
+          "End": 660217,
+          "Session": 11
+        },
+        {
+          "Start": 660217,
+          "End": 673209,
+          "Session": 6
+        },
+        {
+          "Start": 673209,
+          "End": 678209,
+          "Session": 11
+        },
+        {
+          "Start": 678209,
+          "End": 679209,
+          "Session": 11
+        },
+        {
+          "Start": 679209,
+          "End": 720236,
+          "Session": 1
+        },
+        {
+          "Start": 720236,
+          "End": 780237,
+          "Session": 11
+        },
+        {
+          "Start": 780237,
+          "End": 840253,
+          "Session": 6
+        },
+        {
+          "Start": 840253,
+          "End": 900280,
+          "Session": 6
+        },
+        {
+          "Start": 900280,
+          "End": 917434,
+          "Session": 11
+        },
+        {
+          "Start": 917434,
+          "End": 922434,
+          "Session": 6
+        },
+        {
+          "Start": 922434,
+          "End": 923434,
+          "Session": 6
+        },
+        {
+          "Start": 923434,
+          "End": 960301,
+          "Session": 1
+        },
+        {
+          "Start": 960301,
+          "End": 1020327,
+          "Session": 1
+        },
+        {
+          "Start": 1020327,
+          "End": 1069125,
+          "Session": 15
+        },
+        {
+          "Start": 1069125,
+          "End": 1074125,
+          "Session": 6
+        },
+        {
+          "Start": 1074125,
+          "End": 1075125,
+          "Session": 6
+        },
+        {
+          "Start": 1075125,
+          "End": 1080343,
+          "Session": 1
+        },
+        {
+          "Start": 1080343,
+          "End": 1140372,
+          "Session": 6
+        },
+        {
+          "Start": 1140372,
+          "End": 1187082,
+          "Session": 9
+        },
+        {
+          "Start": 1187082,
+          "End": 1192082,
+          "Session": 8
+        },
+        {
+          "Start": 1192082,
+          "End": 1193082,
+          "Session": 8
+        },
+        {
+          "Start": 1193082,
+          "End": 1200387,
+          "Session": 1
+        },
+        {
+          "Start": 1200387,
+          "End": 1260408,
+          "Session": 8
+        },
+        {
+          "Start": 1260408,
+          "End": 1303954,
+          "Session": 10
+        },
+        {
+          "Start": 1303954,
+          "End": 1308954,
+          "Session": 9
+        },
+        {
+          "Start": 1308954,
+          "End": 1309954,
+          "Session": 9
+        },
+        {
+          "Start": 1309954,
+          "End": 1320425,
+          "Session": 1
+        },
+        {
+          "Start": 1320425,
+          "End": 1380430,
+          "Session": 9
+        },
+        {
+          "Start": 1380430,
+          "End": 1440444,
+          "Session": 6
+        },
+        {
+          "Start": 1440444,
+          "End": 1500455,
+          "Session": 8
+        },
+        {
+          "Start": 1500455,
+          "End": 1529364,
+          "Session": 1
+        },
+        {
+          "Start": 1529364,
+          "End": 1534364,
+          "Session": 4
+        },
+        {
+          "Start": 1534364,
+          "End": 1535364,
+          "Session": 4
+        },
+        {
+          "Start": 1535364,
+          "End": 1560469,
+          "Session": 1
+        },
+        {
+          "Start": 1560469,
+          "End": 1620495,
+          "Session": 4
+        },
+        {
+          "Start": 1620495,
+          "End": 1639794,
+          "Session": 5
+        },
+        {
+          "Start": 1639794,
+          "End": 1644794,
+          "Session": 1
+        },
+        {
+          "Start": 1644794,
+          "End": 1645794,
+          "Session": 1
+        },
+        {
+          "Start": 1645794,
+          "End": 1680512,
+          "Session": 1
+        },
+        {
+          "Start": 1680512,
+          "End": 1731381,
+          "Session": 1
+        },
+        {
+          "Start": 1731381,
+          "End": 1736446,
+          "Session": 9
+        },
+        {
+          "Start": 1736446,
+          "End": 1741446,
+          "Session": 9
+        },
+        {
+          "Start": 1741446,
+          "End": 1742446,
+          "Session": 9
+        },
+        {
+          "Start": 1742446,
+          "End": 1800526,
+          "Session": 1
+        },
+        {
+          "Start": 1800526,
+          "End": 1840171,
+          "Session": 4
+        },
+        {
+          "Start": 1840171,
+          "End": 1845171,
+          "Session": 9
+        },
+        {
+          "Start": 1845171,
+          "End": 1846171,
+          "Session": 9
+        },
+        {
+          "Start": 1846171,
+          "End": 1860549,
+          "Session": 1
+        },
+        {
+          "Start": 1860549,
+          "End": 1920561,
+          "Session": 9
+        },
+        {
+          "Start": 1920561,
+          "End": 1980592,
+          "Session": 3
+        },
+        {
+          "Start": 1980592,
+          "End": 2040610,
+          "Session": 5
+        },
+        {
+          "Start": 2040610,
+          "End": 2048449,
+          "Session": 8
+        },
+        {
+          "Start": 2048449,
+          "End": 2053449,
+          "Session": 9
+        },
+        {
+          "Start": 2053449,
+          "End": 2054449,
+          "Session": 9
+        },
+        {
+          "Start": 2054449,
+          "End": 2100640,
+          "Session": 1
+        },
+        {
+          "Start": 2100640,
+          "End": 2135393,
+          "Session": 9
+        },
+        {
+          "Start": 2135393,
+          "End": 2140393,
+          "Session": 1
+        },
+        {
+          "Start": 2140393,
+          "End": 2141393,
+          "Session": 1
+        },
+        {
+          "Start": 2141393,
+          "End": 2160649,
+          "Session": 1
+        },
+        {
+          "Start": 2160649,
+          "End": 2220680,
+          "Session": 1
+        },
+        {
+          "Start": 2220680,
+          "End": 2259002,
+          "Session": 6
+        },
+        {
+          "Start": 2259002,
+          "End": 2264002,
+          "Session": 1
+        },
+        {
+          "Start": 2264002,
+          "End": 2265002,
+          "Session": 1
+        },
+        {
+          "Start": 2265002,
+          "End": 2278417,
+          "Session": 1
+        },
+        {
+          "Start": 2278417,
+          "End": 2278417,
+          "Session": 1
+        }
+      ],
+      "Player7": [
+        {
+          "Start": 0,
+          "End": 60003,
+          "Session": 1
+        },
+        {
+          "Start": 60003,
+          "End": 120025,
+          "Session": 5
+        },
+        {
+          "Start": 120025,
+          "End": 180048,
+          "Session": 5
+        },
+        {
+          "Start": 180048,
+          "End": 240058,
+          "Session": 3
+        },
+        {
+          "Start": 240058,
+          "End": 270918,
+          "Session": 8
+        },
+        {
+          "Start": 270918,
+          "End": 275918,
+          "Session": 8
+        },
+        {
+          "Start": 275918,
+          "End": 276918,
+          "Session": 8
+        },
+        {
+          "Start": 276918,
+          "End": 300083,
+          "Session": 1
+        },
+        {
+          "Start": 300083,
+          "End": 360096,
+          "Session": 4
+        },
+        {
+          "Start": 360096,
+          "End": 420116,
+          "Session": 12
+        },
+        {
+          "Start": 420116,
+          "End": 469307,
+          "Session": 5
+        },
+        {
+          "Start": 469307,
+          "End": 469845,
+          "Session": 11
+        },
+        {
+          "Start": 469845,
+          "End": 474845,
+          "Session": 11
+        },
+        {
+          "Start": 474845,
+          "End": 475845,
+          "Session": 11
+        },
+        {
+          "Start": 475845,
+          "End": 480143,
+          "Session": 1
+        },
+        {
+          "Start": 480143,
+          "End": 540166,
+          "Session": 11
+        },
+        {
+          "Start": 540166,
+          "End": 600188,
+          "Session": 10
+        },
+        {
+          "Start": 600188,
+          "End": 640847,
+          "Session": 13
+        },
+        {
+          "Start": 640847,
+          "End": 660217,
+          "Session": 8
+        },
+        {
+          "Start": 660217,
+          "End": 697783,
+          "Session": 3
+        },
+        {
+          "Start": 697783,
+          "End": 702783,
+          "Session": 12
+        },
+        {
+          "Start": 702783,
+          "End": 703783,
+          "Session": 12
+        },
+        {
+          "Start": 703783,
+          "End": 720236,
+          "Session": 1
+        },
+        {
+          "Start": 720236,
+          "End": 772310,
+          "Session": 12
+        },
+        {
+          "Start": 772310,
+          "End": 777310,
+          "Session": 8
+        },
+        {
+          "Start": 777310,
+          "End": 778310,
+          "Session": 8
+        },
+        {
+          "Start": 778310,
+          "End": 780237,
+          "Session": 1
+        },
+        {
+          "Start": 780237,
+          "End": 840253,
+          "Session": 8
+        },
+        {
+          "Start": 840253,
+          "End": 879469,
+          "Session": 10
+        },
+        {
+          "Start": 879469,
+          "End": 884469,
+          "Session": 11
+        },
+        {
+          "Start": 884469,
+          "End": 885469,
+          "Session": 11
+        },
+        {
+          "Start": 885469,
+          "End": 900280,
+          "Session": 1
+        },
+        {
+          "Start": 900280,
+          "End": 960301,
+          "Session": 11
+        },
+        {
+          "Start": 960301,
+          "End": 980827,
+          "Session": 8
+        },
+        {
+          "Start": 980827,
+          "End": 985827,
+          "Session": 8
+        },
+        {
+          "Start": 985827,
+          "End": 986827,
+          "Session": 8
+        },
+        {
+          "Start": 986827,
+          "End": 1020327,
+          "Session": 1
+        },
+        {
+          "Start": 1020327,
+          "End": 1069884,
+          "Session": 1
+        },
+        {
+          "Start": 1069884,
+          "End": 1074884,
+          "Session": 6
+        },
+        {
+          "Start": 1074884,
+          "End": 1075884,
+          "Session": 6
+        },
+        {
+          "Start": 1075884,
+          "End": 1080343,
+          "Session": 1
+        },
+        {
+          "Start": 1080343,
+          "End": 1140372,
+          "Session": 6
+        },
+        {
+          "Start": 1140372,
+          "End": 1200387,
+          "Session": 9
+        },
+        {
+          "Start": 1200387,
+          "End": 1201147,
+          "Session": 3
+        },
+        {
+          "Start": 1201147,
+          "End": 1260408,
+          "Session": 3
+        },
+        {
+          "Start": 1260408,
+          "End": 1280566,
+          "Session": 6
+        },
+        {
+          "Start": 1280566,
+          "End": 1285566,
+          "Session": 9
+        },
+        {
+          "Start": 1285566,
+          "End": 1286566,
+          "Session": 9
+        },
+        {
+          "Start": 1286566,
+          "End": 1320425,
+          "Session": 1
+        },
+        {
+          "Start": 1320425,
+          "End": 1347958,
+          "Session": 1
+        },
+        {
+          "Start": 1347958,
+          "End": 1352958,
+          "Session": 1
+        },
+        {
+          "Start": 1352958,
+          "End": 1353958,
+          "Session": 1
+        },
+        {
+          "Start": 1353958,
+          "End": 1380430,
+          "Session": 1
+        },
+        {
+          "Start": 1380430,
+          "End": 1440444,
+          "Session": 1
+        },
+        {
+          "Start": 1440444,
+          "End": 1445671,
+          "Session": 3
+        },
+        {
+          "Start": 1445671,
+          "End": 1450671,
+          "Session": 8
+        },
+        {
+          "Start": 1450671,
+          "End": 1451671,
+          "Session": 8
+        },
+        {
+          "Start": 1451671,
+          "End": 1500455,
+          "Session": 1
+        },
+        {
+          "Start": 1500455,
+          "End": 1560469,
+          "Session": 3
+        },
+        {
+          "Start": 1560469,
+          "End": 1605299,
+          "Session": 5
+        },
+        {
+          "Start": 1605299,
+          "End": 1610299,
+          "Session": 2
+        },
+        {
+          "Start": 1610299,
+          "End": 1611299,
+          "Session": 2
+        },
+        {
+          "Start": 1611299,
+          "End": 1620495,
+          "Session": 1
+        },
+        {
+          "Start": 1620495,
+          "End": 1680512,
+          "Session": 2
+        },
+        {
+          "Start": 1680512,
+          "End": 1740514,
+          "Session": 1
+        },
+        {
+          "Start": 1740514,
+          "End": 1800526,
+          "Session": 1
+        },
+        {
+          "Start": 1800526,
+          "End": 1860549,
+          "Session": 1
+        },
+        {
+          "Start": 1860549,
+          "End": 1920561,
+          "Session": 1
+        },
+        {
+          "Start": 1920561,
+          "End": 1980592,
+          "Session": 1
+        },
+        {
+          "Start": 1980592,
+          "End": 2040610,
+          "Session": 1
+        },
+        {
+          "Start": 2040610,
+          "End": 2100640,
+          "Session": 1
+        },
+        {
+          "Start": 2100640,
+          "End": 2160649,
+          "Session": 1
+        },
+        {
+          "Start": 2160649,
+          "End": 2220680,
+          "Session": 1
+        },
+        {
+          "Start": 2220680,
+          "End": 2278417,
+          "Session": 1
+        },
+        {
+          "Start": 2278417,
+          "End": 2278417,
+          "Session": 1
+        }
+      ],
+      "Player8": [
+        {
+          "Start": 0,
+          "End": 60003,
+          "Session": 1
+        },
+        {
+          "Start": 60003,
+          "End": 120025,
+          "Session": 9
+        },
+        {
+          "Start": 120025,
+          "End": 180048,
+          "Session": 9
+        },
+        {
+          "Start": 180048,
+          "End": 203473,
+          "Session": 9
+        },
+        {
+          "Start": 203473,
+          "End": 208473,
+          "Session": 9
+        },
+        {
+          "Start": 208473,
+          "End": 209473,
+          "Session": 9
+        },
+        {
+          "Start": 209473,
+          "End": 240058,
+          "Session": 1
+        },
+        {
+          "Start": 240058,
+          "End": 300083,
+          "Session": 9
+        },
+        {
+          "Start": 300083,
+          "End": 360096,
+          "Session": 13
+        },
+        {
+          "Start": 360096,
+          "End": 387254,
+          "Session": 9
+        },
+        {
+          "Start": 387254,
+          "End": 392254,
+          "Session": 8
+        },
+        {
+          "Start": 392254,
+          "End": 393254,
+          "Session": 8
+        },
+        {
+          "Start": 393254,
+          "End": 420116,
+          "Session": 1
+        },
+        {
+          "Start": 420116,
+          "End": 480143,
+          "Session": 4
+        },
+        {
+          "Start": 480143,
+          "End": 508493,
+          "Session": 9
+        },
+        {
+          "Start": 508493,
+          "End": 513493,
+          "Session": 5
+        },
+        {
+          "Start": 513493,
+          "End": 514493,
+          "Session": 5
+        },
+        {
+          "Start": 514493,
+          "End": 540166,
+          "Session": 1
+        },
+        {
+          "Start": 540166,
+          "End": 600188,
+          "Session": 4
+        },
+        {
+          "Start": 600188,
+          "End": 626842,
+          "Session": 9
+        },
+        {
+          "Start": 626842,
+          "End": 643665,
+          "Session": 9
+        },
+        {
+          "Start": 643665,
+          "End": 648665,
+          "Session": 10
+        },
+        {
+          "Start": 648665,
+          "End": 649665,
+          "Session": 10
+        },
+        {
+          "Start": 649665,
+          "End": 660217,
+          "Session": 1
+        },
+        {
+          "Start": 660217,
+          "End": 720236,
+          "Session": 10
+        },
+        {
+          "Start": 720236,
+          "End": 780237,
+          "Session": 14
+        },
+        {
+          "Start": 780237,
+          "End": 803238,
+          "Session": 9
+        },
+        {
+          "Start": 803238,
+          "End": 808238,
+          "Session": 9
+        },
+        {
+          "Start": 808238,
+          "End": 809238,
+          "Session": 9
+        },
+        {
+          "Start": 809238,
+          "End": 840253,
+          "Session": 1
+        },
+        {
+          "Start": 840253,
+          "End": 900280,
+          "Session": 1
+        },
+        {
+          "Start": 900280,
+          "End": 910201,
+          "Session": 9
+        },
+        {
+          "Start": 910201,
+          "End": 915201,
+          "Session": 4
+        },
+        {
+          "Start": 915201,
+          "End": 916201,
+          "Session": 4
+        },
+        {
+          "Start": 916201,
+          "End": 960301,
+          "Session": 1
+        },
+        {
+          "Start": 960301,
+          "End": 987588,
+          "Session": 3
+        },
+        {
+          "Start": 987588,
+          "End": 1020327,
+          "Session": 8
+        },
+        {
+          "Start": 1020327,
+          "End": 1068816,
+          "Session": 9
+        },
+        {
+          "Start": 1068816,
+          "End": 1080343,
+          "Session": 14
+        },
+        {
+          "Start": 1080343,
+          "End": 1087091,
+          "Session": 15
+        },
+        {
+          "Start": 1087091,
+          "End": 1092091,
+          "Session": 15
+        },
+        {
+          "Start": 1092091,
+          "End": 1093091,
+          "Session": 15
+        },
+        {
+          "Start": 1093091,
+          "End": 1140372,
+          "Session": 1
+        },
+        {
+          "Start": 1140372,
+          "End": 1187544,
+          "Session": 6
+        },
+        {
+          "Start": 1187544,
+          "End": 1192544,
+          "Session": 10
+        },
+        {
+          "Start": 1192544,
+          "End": 1193544,
+          "Session": 10
+        },
+        {
+          "Start": 1193544,
+          "End": 1200387,
+          "Session": 1
+        },
+        {
+          "Start": 1200387,
+          "End": 1260408,
+          "Session": 10
+        },
+        {
+          "Start": 1260408,
+          "End": 1260441,
+          "Session": 10
+        },
+        {
+          "Start": 1260441,
+          "End": 1269434,
+          "Session": 10
+        },
+        {
+          "Start": 1269434,
+          "End": 1274434,
+          "Session": 9
+        },
+        {
+          "Start": 1274434,
+          "End": 1275434,
+          "Session": 9
+        },
+        {
+          "Start": 1275434,
+          "End": 1320425,
+          "Session": 1
+        },
+        {
+          "Start": 1320425,
+          "End": 1334049,
+          "Session": 1
+        },
+        {
+          "Start": 1334049,
+          "End": 1339049,
+          "Session": 1
+        },
+        {
+          "Start": 1339049,
+          "End": 1340049,
+          "Session": 1
+        },
+        {
+          "Start": 1340049,
+          "End": 1380430,
+          "Session": 1
+        },
+        {
+          "Start": 1380430,
+          "End": 1431106,
+          "Session": 1
+        },
+        {
+          "Start": 1431106,
+          "End": 1436106,
+          "Session": 3
+        },
+        {
+          "Start": 1436106,
+          "End": 1437106,
+          "Session": 3
+        },
+        {
+          "Start": 1437106,
+          "End": 1440444,
+          "Session": 1
+        },
+        {
+          "Start": 1440444,
+          "End": 1500455,
+          "Session": 3
+        },
+        {
+          "Start": 1500455,
+          "End": 1521834,
+          "Session": 3
+        },
+        {
+          "Start": 1521834,
+          "End": 1526834,
+          "Session": 8
+        },
+        {
+          "Start": 1526834,
+          "End": 1527834,
+          "Session": 8
+        },
+        {
+          "Start": 1527834,
+          "End": 1560469,
+          "Session": 1
+        },
+        {
+          "Start": 1560469,
+          "End": 1586398,
+          "Session": 8
+        },
+        {
+          "Start": 1586398,
+          "End": 1597141,
+          "Session": 2
+        },
+        {
+          "Start": 1597141,
+          "End": 1602141,
+          "Session": 2
+        },
+        {
+          "Start": 1602141,
+          "End": 1603141,
+          "Session": 2
+        },
+        {
+          "Start": 1603141,
+          "End": 1620495,
+          "Session": 1
+        },
+        {
+          "Start": 1620495,
+          "End": 1657222,
+          "Session": 2
+        },
+        {
+          "Start": 1657222,
+          "End": 1680512,
+          "Session": 2
+        },
+        {
+          "Start": 1680512,
+          "End": 1705266,
+          "Session": 4
+        },
+        {
+          "Start": 1705266,
+          "End": 1710266,
+          "Session": 9
+        },
+        {
+          "Start": 1710266,
+          "End": 1711266,
+          "Session": 9
+        },
+        {
+          "Start": 1711266,
+          "End": 1740514,
+          "Session": 1
+        },
+        {
+          "Start": 1740514,
+          "End": 1781205,
+          "Session": 9
+        },
+        {
+          "Start": 1781205,
+          "End": 1786499,
+          "Session": 13
+        },
+        {
+          "Start": 1786499,
+          "End": 1791499,
+          "Session": 8
+        },
+        {
+          "Start": 1791499,
+          "End": 1792236,
+          "Session": 8
+        },
+        {
+          "Start": 1792236,
+          "End": 1792499,
+          "Session": 13
+        },
+        {
+          "Start": 1792499,
+          "End": 1800526,
+          "Session": 1
+        },
+        {
+          "Start": 1800526,
+          "End": 1860549,
+          "Session": 8
+        },
+        {
+          "Start": 1860549,
+          "End": 1920561,
+          "Session": 9
+        },
+        {
+          "Start": 1920561,
+          "End": 1956927,
+          "Session": 8
+        },
+        {
+          "Start": 1956927,
+          "End": 1980592,
+          "Session": 6
+        },
+        {
+          "Start": 1980592,
+          "End": 2019249,
+          "Session": 1
+        },
+        {
+          "Start": 2019249,
+          "End": 2024249,
+          "Session": 14
+        },
+        {
+          "Start": 2024249,
+          "End": 2040610,
+          "Session": 14
+        },
+        {
+          "Start": 2040610,
+          "End": 2043330,
+          "Session": 9
+        },
+        {
+          "Start": 2043330,
+          "End": 2048330,
+          "Session": 13
+        },
+        {
+          "Start": 2048330,
+          "End": 2049330,
+          "Session": 13
+        },
+        {
+          "Start": 2049330,
+          "End": 2100640,
+          "Session": 1
+        },
+        {
+          "Start": 2100640,
+          "End": 2113827,
+          "Session": 1
+        },
+        {
+          "Start": 2113827,
+          "End": 2118827,
+          "Session": 1
+        },
+        {
+          "Start": 2118827,
+          "End": 2119827,
+          "Session": 1
+        },
+        {
+          "Start": 2119827,
+          "End": 2160649,
+          "Session": 1
+        },
+        {
+          "Start": 2160649,
+          "End": 2189262,
+          "Session": 1
+        },
+        {
+          "Start": 2189262,
+          "End": 2194262,
+          "Session": 1
+        },
+        {
+          "Start": 2194262,
+          "End": 2195262,
+          "Session": 1
+        },
+        {
+          "Start": 2195262,
+          "End": 2220680,
+          "Session": 1
+        },
+        {
+          "Start": 2220680,
+          "End": 2268418,
+          "Session": 1
+        },
+        {
+          "Start": 2268418,
+          "End": 2273418,
+          "Session": 1
+        },
+        {
+          "Start": 2273418,
+          "End": 2274418,
+          "Session": 1
+        },
+        {
+          "Start": 2274418,
+          "End": 2278417,
+          "Session": 1
+        },
+        {
+          "Start": 2278417,
+          "End": 2278417,
+          "Session": 1
+        }
+      ],
+      "Player9": [
+        {
+          "Start": 0,
+          "End": 60003,
+          "Session": 1
+        },
+        {
+          "Start": 60003,
+          "End": 120025,
+          "Session": 8
+        },
+        {
+          "Start": 120025,
+          "End": 180048,
+          "Session": 1
+        },
+        {
+          "Start": 180048,
+          "End": 240058,
+          "Session": 1
+        },
+        {
+          "Start": 240058,
+          "End": 300083,
+          "Session": 1
+        },
+        {
+          "Start": 300083,
+          "End": 348603,
+          "Session": 3
+        },
+        {
+          "Start": 348603,
+          "End": 360096,
+          "Session": 7
+        },
+        {
+          "Start": 360096,
+          "End": 420116,
+          "Session": 7
+        },
+        {
+          "Start": 420116,
+          "End": 476970,
+          "Session": 1
+        },
+        {
+          "Start": 476970,
+          "End": 480143,
+          "Session": 12
+        },
+        {
+          "Start": 480143,
+          "End": 540166,
+          "Session": 12
+        },
+        {
+          "Start": 540166,
+          "End": 600188,
+          "Session": 12
+        },
+        {
+          "Start": 600188,
+          "End": 660217,
+          "Session": 7
+        },
+        {
+          "Start": 660217,
+          "End": 670920,
+          "Session": 8
+        },
+        {
+          "Start": 670920,
+          "End": 693919,
+          "Session": 8
+        },
+        {
+          "Start": 693919,
+          "End": 698919,
+          "Session": 12
+        },
+        {
+          "Start": 698919,
+          "End": 699919,
+          "Session": 12
+        },
+        {
+          "Start": 699919,
+          "End": 720236,
+          "Session": 1
+        },
+        {
+          "Start": 720236,
+          "End": 746677,
+          "Session": 1
+        },
+        {
+          "Start": 746677,
+          "End": 751677,
+          "Session": 3
+        },
+        {
+          "Start": 751677,
+          "End": 752677,
+          "Session": 3
+        },
+        {
+          "Start": 752677,
+          "End": 780237,
+          "Session": 1
+        },
+        {
+          "Start": 780237,
+          "End": 822922,
+          "Session": 3
+        },
+        {
+          "Start": 822922,
+          "End": 827922,
+          "Session": 7
+        },
+        {
+          "Start": 827922,
+          "End": 828922,
+          "Session": 7
+        },
+        {
+          "Start": 828922,
+          "End": 840253,
+          "Session": 1
+        },
+        {
+          "Start": 840253,
+          "End": 900280,
+          "Session": 7
+        },
+        {
+          "Start": 900280,
+          "End": 923577,
+          "Session": 8
+        },
+        {
+          "Start": 923577,
+          "End": 928577,
+          "Session": 10
+        },
+        {
+          "Start": 928577,
+          "End": 929577,
+          "Session": 10
+        },
+        {
+          "Start": 929577,
+          "End": 960301,
+          "Session": 1
+        },
+        {
+          "Start": 960301,
+          "End": 1020327,
+          "Session": 6
+        },
+        {
+          "Start": 1020327,
+          "End": 1068035,
+          "Session": 15
+        },
+        {
+          "Start": 1068035,
+          "End": 1073035,
+          "Session": 14
+        },
+        {
+          "Start": 1073035,
+          "End": 1074035,
+          "Session": 14
+        },
+        {
+          "Start": 1074035,
+          "End": 1080343,
+          "Session": 1
+        },
+        {
+          "Start": 1080343,
+          "End": 1140372,
+          "Session": 14
+        },
+        {
+          "Start": 1140372,
+          "End": 1188525,
+          "Session": 9
+        },
+        {
+          "Start": 1188525,
+          "End": 1195641,
+          "Session": 14
+        },
+        {
+          "Start": 1195641,
+          "End": 1200641,
+          "Session": 8
+        },
+        {
+          "Start": 1200641,
+          "End": 1201641,
+          "Session": 8
+        },
+        {
+          "Start": 1201641,
+          "End": 1260408,
+          "Session": 1
+        },
+        {
+          "Start": 1260408,
+          "End": 1305869,
+          "Session": 9
+        },
+        {
+          "Start": 1305869,
+          "End": 1310869,
+          "Session": 12
+        },
+        {
+          "Start": 1310869,
+          "End": 1320425,
+          "Session": 12
+        },
+        {
+          "Start": 1320425,
+          "End": 1345778,
+          "Session": 12
+        },
+        {
+          "Start": 1345778,
+          "End": 1350778,
+          "Session": 1
+        },
+        {
+          "Start": 1350778,
+          "End": 1351778,
+          "Session": 1
+        },
+        {
+          "Start": 1351778,
+          "End": 1380430,
+          "Session": 1
+        },
+        {
+          "Start": 1380430,
+          "End": 1417598,
+          "Session": 1
+        },
+        {
+          "Start": 1417598,
+          "End": 1422598,
+          "Session": 3
+        },
+        {
+          "Start": 1422598,
+          "End": 1423598,
+          "Session": 3
+        },
+        {
+          "Start": 1423598,
+          "End": 1440444,
+          "Session": 1
+        },
+        {
+          "Start": 1440444,
+          "End": 1500455,
+          "Session": 3
+        },
+        {
+          "Start": 1500455,
+          "End": 1560469,
+          "Session": 6
+        },
+        {
+          "Start": 1560469,
+          "End": 1588258,
+          "Session": 16
+        },
+        {
+          "Start": 1588258,
+          "End": 1593258,
+          "Session": 16
+        },
+        {
+          "Start": 1593258,
+          "End": 1620495,
+          "Session": 16
+        },
+        {
+          "Start": 1620495,
+          "End": 1624668,
+          "Session": 9
+        },
+        {
+          "Start": 1624668,
+          "End": 1629668,
+          "Session": 9
+        },
+        {
+          "Start": 1629668,
+          "End": 1630668,
+          "Session": 9
+        },
+        {
+          "Start": 1630668,
+          "End": 1680512,
+          "Session": 1
+        },
+        {
+          "Start": 1680512,
+          "End": 1724984,
+          "Session": 1
+        },
+        {
+          "Start": 1724984,
+          "End": 1729984,
+          "Session": 9
+        },
+        {
+          "Start": 1729984,
+          "End": 1730984,
+          "Session": 9
+        },
+        {
+          "Start": 1730984,
+          "End": 1740514,
+          "Session": 1
+        },
+        {
+          "Start": 1740514,
+          "End": 1800526,
+          "Session": 9
+        },
+        {
+          "Start": 1800526,
+          "End": 1860549,
+          "Session": 5
+        },
+        {
+          "Start": 1860549,
+          "End": 1870105,
+          "Session": 16
+        },
+        {
+          "Start": 1870105,
+          "End": 1875105,
+          "Session": 17
+        },
+        {
+          "Start": 1875105,
+          "End": 1876105,
+          "Session": 17
+        },
+        {
+          "Start": 1876105,
+          "End": 1920561,
+          "Session": 1
+        },
+        {
+          "Start": 1920561,
+          "End": 1980592,
+          "Session": 17
+        },
+        {
+          "Start": 1980592,
+          "End": 2028961,
+          "Session": 3
+        },
+        {
+          "Start": 2028961,
+          "End": 2033961,
+          "Session": 9
+        },
+        {
+          "Start": 2033961,
+          "End": 2034961,
+          "Session": 9
+        },
+        {
+          "Start": 2034961,
+          "End": 2040610,
+          "Session": 1
+        },
+        {
+          "Start": 2040610,
+          "End": 2100640,
+          "Session": 9
+        },
+        {
+          "Start": 2100640,
+          "End": 2160649,
+          "Session": 1
+        },
+        {
+          "Start": 2160649,
+          "End": 2220680,
+          "Session": 1
+        },
+        {
+          "Start": 2220680,
+          "End": 2278417,
+          "Session": 1
+        },
+        {
+          "Start": 2278417,
+          "End": 2278417,
+          "Session": 1
+        }
+      ],
+      "Player10": [
+        {
+          "Start": 0,
+          "End": 60003,
+          "Session": 1
+        },
+        {
+          "Start": 60003,
+          "End": 120025,
+          "Session": 7
+        },
+        {
+          "Start": 120025,
+          "End": 180048,
+          "Session": 12
+        },
+        {
+          "Start": 180048,
+          "End": 240058,
+          "Session": 7
+        },
+        {
+          "Start": 240058,
+          "End": 300083,
+          "Session": 7
+        },
+        {
+          "Start": 300083,
+          "End": 360096,
+          "Session": 7
+        },
+        {
+          "Start": 360096,
+          "End": 420116,
+          "Session": 7
+        },
+        {
+          "Start": 420116,
+          "End": 470298,
+          "Session": 7
+        },
+        {
+          "Start": 470298,
+          "End": 480143,
+          "Session": 7
+        },
+        {
+          "Start": 480143,
+          "End": 540166,
+          "Session": 12
+        },
+        {
+          "Start": 540166,
+          "End": 600188,
+          "Session": 12
+        },
+        {
+          "Start": 600188,
+          "End": 660217,
+          "Session": 7
+        },
+        {
+          "Start": 660217,
+          "End": 720236,
+          "Session": 3
+        },
+        {
+          "Start": 720236,
+          "End": 780237,
+          "Session": 7
+        },
+        {
+          "Start": 780237,
+          "End": 840253,
+          "Session": 7
+        },
+        {
+          "Start": 840253,
+          "End": 871774,
+          "Session": 7
+        },
+        {
+          "Start": 871774,
+          "End": 876774,
+          "Session": 12
+        },
+        {
+          "Start": 876774,
+          "End": 900280,
+          "Session": 12
+        },
+        {
+          "Start": 900280,
+          "End": 933939,
+          "Session": 12
+        },
+        {
+          "Start": 933939,
+          "End": 960301,
+          "Session": 9
+        },
+        {
+          "Start": 960301,
+          "End": 1020327,
+          "Session": 8
+        },
+        {
+          "Start": 1020327,
+          "End": 1080343,
+          "Session": 9
+        },
+        {
+          "Start": 1080343,
+          "End": 1140372,
+          "Session": 7
+        },
+        {
+          "Start": 1140372,
+          "End": 1191929,
+          "Session": 9
+        },
+        {
+          "Start": 1191929,
+          "End": 1195245,
+          "Session": 8
+        },
+        {
+          "Start": 1195245,
+          "End": 1200245,
+          "Session": 3
+        },
+        {
+          "Start": 1200245,
+          "End": 1200387,
+          "Session": 3
+        },
+        {
+          "Start": 1200387,
+          "End": 1201245,
+          "Session": 3
+        },
+        {
+          "Start": 1201245,
+          "End": 1260408,
+          "Session": 1
+        },
+        {
+          "Start": 1260408,
+          "End": 1320425,
+          "Session": 3
+        },
+        {
+          "Start": 1320425,
+          "End": 1380430,
+          "Session": 12
+        },
+        {
+          "Start": 1380430,
+          "End": 1440444,
+          "Session": 1
+        },
+        {
+          "Start": 1440444,
+          "End": 1445628,
+          "Session": 3
+        },
+        {
+          "Start": 1445628,
+          "End": 1500455,
+          "Session": 8
+        },
+        {
+          "Start": 1500455,
+          "End": 1547751,
+          "Session": 3
+        },
+        {
+          "Start": 1547751,
+          "End": 1560469,
+          "Session": 7
+        },
+        {
+          "Start": 1560469,
+          "End": 1565434,
+          "Session": 2
+        },
+        {
+          "Start": 1565434,
+          "End": 1570434,
+          "Session": 2
+        },
+        {
+          "Start": 1570434,
+          "End": 1571434,
+          "Session": 2
+        },
+        {
+          "Start": 1571434,
+          "End": 1620495,
+          "Session": 1
+        },
+        {
+          "Start": 1620495,
+          "End": 1647842,
+          "Session": 1
+        },
+        {
+          "Start": 1647842,
+          "End": 1680512,
+          "Session": 1
+        },
+        {
+          "Start": 1680512,
+          "End": 1740514,
+          "Session": 1
+        },
+        {
+          "Start": 1740514,
+          "End": 1800526,
+          "Session": 3
+        },
+        {
+          "Start": 1800526,
+          "End": 1843497,
+          "Session": 4
+        },
+        {
+          "Start": 1843497,
+          "End": 1860549,
+          "Session": 9
+        },
+        {
+          "Start": 1860549,
+          "End": 1920561,
+          "Session": 3
+        },
+        {
+          "Start": 1920561,
+          "End": 1980592,
+          "Session": 12
+        },
+        {
+          "Start": 1980592,
+          "End": 2040610,
+          "Session": 3
+        },
+        {
+          "Start": 2040610,
+          "End": 2100640,
+          "Session": 12
+        },
+        {
+          "Start": 2100640,
+          "End": 2160649,
+          "Session": 1
+        },
+        {
+          "Start": 2160649,
+          "End": 2165537,
+          "Session": 1
+        },
+        {
+          "Start": 2165537,
+          "End": 2220680,
+          "Session": 1
+        },
+        {
+          "Start": 2220680,
+          "End": 2278417,
+          "Session": 1
+        },
+        {
+          "Start": 2278417,
+          "End": 2278417,
+          "Session": 1
+        }
+      ]
+    }
+  }
+}

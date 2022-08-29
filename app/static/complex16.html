@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>iStoryline</title>
+    <title>Demo</title>
     <style>
       body {
         margin: 0;
@@ -41,6 +41,7 @@
       <svg id="mySvg" class="mySvg" height="100vh"></svg>
     </div>
     <script>
+      document.addEventListener('contextmenu', event => event.preventDefault())
       const scrollContainer = document.getElementById('container')
       scrollContainer.addEventListener('wheel', evt => {
         evt.preventDefault()

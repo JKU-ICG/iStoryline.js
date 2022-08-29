@@ -497,6 +497,7 @@ function heroInfo(character, participantsInfo, useMode) {
   const mapX = 23
   const mapY = 520
 
+  svg.text(mapX, mapY - 65, 'Notice: This is a demo.')
   svg.text(mapX + 15, mapY - 25, 'Map Division')
 
   if (useMode === 0 || useMode == 1) {
@@ -1004,7 +1005,9 @@ async function drawEvents(graph, participantsInfo) {
 
       let killerId = heroArray.indexOf(killerName) + 1 // +1 for real position
 
-      let border, mask, img
+      let border
+
+      // let mask, img
 
       let killer, victim
 
@@ -1012,11 +1015,11 @@ async function drawEvents(graph, participantsInfo) {
 
       let killerBorder, victimBorder
 
-      let innerCircle
+      // let innerCircle
 
       let killerNameElement, victimNameElement
 
-      let killing
+      // let killing
 
       if (data[i]['killType'] === 'CHAMPION_KILL') {
         const iconSize = 30
@@ -1051,21 +1054,21 @@ async function drawEvents(graph, participantsInfo) {
 
               pt = pt.matrixTransform(mySvg.getScreenCTM().inverse())
 
-              const mapSize = 200
+              // const mapSize = 200
 
               let tipX = pt.x
               let tipY = pt.y
 
               console.log(tipX, tipY)
 
-              if (pt.y >= 850) {
-                // tipX -= 100
-                tipY -= 100
-              }
+              /*                  if (pt.y >= 850) {
+                        // tipX -= 100
+                        tipY -= 100
+                      }*/
 
               if (pt.y >= 950) {
                 // tipX -= 100
-                tipY -= 200
+                tipY -= 50 // was 200 before
               }
 
               if (pt.x >= 5700) {
@@ -1075,12 +1078,13 @@ async function drawEvents(graph, participantsInfo) {
               // console.log(posX, posY)
               // console.log(timeStamp(currentTimestamp))
 
-              let xOffset = (posX / 15000) * 200
-              let yOffset = 200 - (posY / 15000) * 200
+              // let xOffset = (posX / 15000) * 200
+              // let yOffset = 200 - (posY / 15000) * 200
 
               currentPlayer = 'Player' + String(playerIndex)
 
-              border = svg.rect(tipX, tipY, 250, 325, 10, 10).attr({
+              // backup arg with minimap - tipX, tipY, 250, 325, 10, 10
+              border = svg.rect(tipX, tipY, 250, 125, 10, 10).attr({
                 stroke: 'black',
                 fill: 'rgba(255,255,255, 0.9)',
                 strokeWidth: '3px',
@@ -1131,29 +1135,29 @@ async function drawEvents(graph, participantsInfo) {
                 victimName
               )
 
-              mask = svg
-                .rect(tipX + 25, tipY + 115, mapSize, mapSize, 10, 10)
-                .attr({ fill: 'rgba(225, 225, 0)' })
-              img = svg.image(
-                `../../src/image/MiniMap.png`,
-                tipX + 25,
-                tipY + 115,
-                mapSize,
-                mapSize
-              )
-              img.attr({
-                mask: mask,
-              })
-              innerCircle = svg
-                .circle(tipX + 25 + xOffset, tipY + 115 + yOffset, 4)
-                .attr({ fill: 'none', stroke: `white`, strokeWidth: '3px' })
-              killing = svg
-                .circle(tipX + 25 + xOffset, tipY + 115 + yOffset, 5)
-                .attr({
-                  fill: 'none',
-                  stroke: `${playerColour[currentPlayer]}`,
-                  strokeWidth: '2px',
-                })
+              /*mask = svg
+                        .rect(tipX + 25, tipY + 115, mapSize, mapSize, 10, 10)
+                        .attr({ fill: 'rgba(225, 225, 0)' })
+                      img = svg.image(
+                        `../../src/image/MiniMap.png`,
+                        tipX + 25,
+                        tipY + 115,
+                        mapSize,
+                        mapSize
+                      )
+                      img.attr({
+                        mask: mask,
+                      })
+                      innerCircle = svg
+                        .circle(tipX + 25 + xOffset, tipY + 115 + yOffset, 4)
+                        .attr({ fill: 'none', stroke: `white`, strokeWidth: '3px' })
+                      killing = svg
+                        .circle(tipX + 25 + xOffset, tipY + 115 + yOffset, 5)
+                        .attr({
+                          fill: 'none',
+                          stroke: `${playerColour[currentPlayer]}`,
+                          strokeWidth: '2px',
+                        })*/
               // console.log(currentTimestamp, currentPlayer)
             },
             () => {
@@ -1162,10 +1166,10 @@ async function drawEvents(graph, participantsInfo) {
               killerIcon.remove()
               victim.remove()
               victimIcon.remove()
-              mask.remove()
-              img.remove()
-              killing.remove()
-              innerCircle.remove()
+              /*mask.remove()
+                      img.remove()
+                      killing.remove()
+                      innerCircle.remove()*/
               victimBorder.remove()
               killerBorder.remove()
               killerNameElement.remove()
@@ -1219,7 +1223,7 @@ async function drawEvents(graph, participantsInfo) {
         playerIndex = reverseId(playerIndex)
         currentPlayer = 'Player' + String(playerIndex)
 
-        let mask, img
+        // let mask, img
 
         svg
           .image(
@@ -1236,29 +1240,30 @@ async function drawEvents(graph, participantsInfo) {
 
               pt = pt.matrixTransform(mySvg.getScreenCTM().inverse())
 
-              const mapSize = 200
+              // const mapSize = 200
 
               let tipX = pt.x
               let tipY = pt.y
 
-              if (pt.y >= 850) {
-                // tipX -= 100
-                tipY -= 100
-              }
+              /*                  if (pt.y >= 850) {
+                        // tipX -= 100
+                        tipY -= 100
+                      }*/
 
               if (pt.y >= 950) {
                 // tipX -= 100
-                tipY -= 200
+                tipY -= 50 // was 200 before
               }
 
               if (pt.x >= 5700) {
                 tipX -= 200
               }
 
-              let xOffset = (posX / 15000) * 200
-              let yOffset = 200 - (posY / 15000) * 200
+              // let xOffset = (posX / 15000) * 200
+              // let yOffset = 200 - (posY / 15000) * 200
 
-              border = svg.rect(tipX, tipY, 250, 310, 10, 10).attr({
+              // svg.rect(tipX, tipY, 250, 310, 10, 10)
+              border = svg.rect(tipX, tipY, 250, 110, 10, 10).attr({
                 stroke: `Black`,
                 fill: 'rgba(255,255,255, 0.9)',
                 strokeWidth: '3px',
@@ -1300,39 +1305,39 @@ async function drawEvents(graph, participantsInfo) {
                 killerName
               )
 
-              mask = svg
-                .rect(tipX + 25, tipY + 100, mapSize, mapSize, 10, 10)
-                .attr({ fill: 'rgba(225, 225, 0)' })
-              img = svg.image(
-                `../../src/image/MiniMap.png`,
-                tipX + 25,
-                tipY + 90,
-                mapSize,
-                mapSize
-              )
-              img.attr({
-                mask: mask,
-              })
-              innerCircle = svg
-                .circle(tipX + 25 + xOffset, tipY + 100 + yOffset, 4)
-                .attr({ fill: 'none', stroke: `white`, strokeWidth: '3px' })
-              killing = svg
-                .circle(tipX + 25 + xOffset, tipY + 100 + yOffset, 5)
-                .attr({
-                  fill: 'none',
-                  stroke: `${borderColour}`,
-                  strokeWidth: '2px',
-                })
+              /*mask = svg
+                        .rect(tipX + 25, tipY + 100, mapSize, mapSize, 10, 10)
+                        .attr({ fill: 'rgba(225, 225, 0)' })
+                      img = svg.image(
+                        `../../src/image/MiniMap.png`,
+                        tipX + 25,
+                        tipY + 90,
+                        mapSize,
+                        mapSize
+                      )
+                      img.attr({
+                        mask: mask,
+                      })
+                      innerCircle = svg
+                        .circle(tipX + 25 + xOffset, tipY + 100 + yOffset, 4)
+                        .attr({ fill: 'none', stroke: `white`, strokeWidth: '3px' })
+                      killing = svg
+                        .circle(tipX + 25 + xOffset, tipY + 100 + yOffset, 5)
+                        .attr({
+                          fill: 'none',
+                          stroke: `${borderColour}`,
+                          strokeWidth: '2px',
+                        })*/
             },
             () => {
               border.remove()
               killer.remove()
               killerIcon.remove()
               victim.remove()
-              mask.remove()
-              img.remove()
-              innerCircle.remove()
-              killing.remove()
+              /*mask.remove()
+                      img.remove()
+                      innerCircle.remove()
+                      killing.remove()*/
               killerBorder.remove()
               killerNameElement.remove()
             }
